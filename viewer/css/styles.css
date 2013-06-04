@@ -127,6 +127,7 @@ body{
 	margin:25px auto;
 	opacity:0.4;
 	filter:alpha(opacity=40); /* For IE8 and earlier */
+	background-color:#FFF;
 }
 
 .selected {
@@ -201,6 +202,11 @@ body{
 img.center{
 	display:block;
 	margin:0px auto;
+}
+
+#myFrame{
+	width:900px;
+	height:1200px;
 }
 
 /*MISC
