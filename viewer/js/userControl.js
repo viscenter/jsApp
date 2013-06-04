@@ -296,7 +296,7 @@ function upDateThumb()
 		//alert("setThumb")
 	}
 }
-//upDateThumb()
+upDateThumb()
 
 
 
