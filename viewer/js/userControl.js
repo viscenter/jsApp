@@ -285,11 +285,11 @@ function updateLayers(layerValue)
 function upDateThumb()
 {
 //alert("setThumb")
-	var listOfThumb = document.getElementsByClassName("thumb_img");
+	var listOfThumb = document.getElementsByClassName("thumb");
 	for(var i = 0; i<listOfThumb.length;i++)
 	{
-		listOfThumb[i].src = totalListOfLayers[i].src;
-		listOfThumb[i].style.opacity = .3;
+		listOfThumb[i].children[0].src = totalListOfLayers[i].src;
+		//listOfThumb[0][i].style.opacity = .3;
 		//alert("setThumb")
 	}
 }
