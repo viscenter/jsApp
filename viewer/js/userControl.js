@@ -85,8 +85,11 @@ function bigger()
 	
 	var y = window.frames['myFrame'].document.getElementById("draggable").style.top;
 	var x = window.frames['myFrame'].document.getElementById("draggable").style.left;
-	window.frames['myFrame'].document.getElementById("draggable").style.left = parseInt(x,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-	window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)
+	//window.frames['myFrame'].document.getElementById("draggable").style.left = parseInt(x,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+	//window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)
+	
+	window.frames['myFrame'].document.getElementById("draggable").style.left = (parseInt(x,0)+(3/2)*imageSize/2) -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+	window.frames['myFrame'].document.getElementById("draggable").style.top  = (parseInt(y,0)+(3/2)*imageSize/2)-600'
 	
 	imageSize = (imageSize*3)/2;
 	displayLayers();
@@ -101,8 +104,8 @@ function smaller()
 {
 	var y = window.frames['myFrame'].document.getElementById("draggable").style.top;
 	var x = window.frames['myFrame'].document.getElementById("draggable").style.left;
-	window.frames['myFrame'].document.getElementById("draggable").style.left = parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-	window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)
+	window.frames['myFrame'].document.getElementById("draggable").style.left = (parseInt(x,0)+(2/3)*imageSize/2) -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+	window.frames['myFrame'].document.getElementById("draggable").style.top  = (parseInt(y,0)+(2/3)*imageSize/2) -600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)
 	imageSize = 2*(imageSize/3);
 	displayLayers();
 }
@@ -293,5 +296,8 @@ function upDateThumb()
 		//alert("setThumb")
 	}
 }
-upDateThumb()
+//upDateThumb()
+
+
+
 
