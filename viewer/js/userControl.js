@@ -88,8 +88,8 @@ function bigger()
 	//window.frames['myFrame'].document.getElementById("draggable").style.left = parseInt(x,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
 	//window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)   ;
 	
-document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)-((2/3)*imageSize -imageSize)/2);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)-((2/3)*imageSize -imageSize)/2);
+document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)-((3/2)*imageSize -imageSize));// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)-((3/2)*imageSize -imageSize));
 	
 	imageSize = (imageSize*3)/2;
 	displayLayers();
@@ -104,8 +104,8 @@ function smaller()
 {
 	var y =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top;
 	var x =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)-((3/2)*imageSize -imageSize)/2);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)-((3/2)*imageSize -imageSize)/2) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)-((2/3)*imageSize -imageSize));// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)-((2/3)*imageSize -imageSize)) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
 	imageSize = 2*(imageSize/3);
 	displayLayers();
 }
