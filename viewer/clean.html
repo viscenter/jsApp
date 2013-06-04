@@ -1,0 +1,50 @@
+
+<html>
+<head>
+
+  <!-- 
+  Including jquery libraries. Later in this page jquery in used
+  NOTE, before we distribute this we should have locale copies for both jquery files
+  -->
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+</head>
+
+<!--
+The Style tag below allows us to set things to the style called draggable.
+Later we will give very special abilities to the draggable style  
+-->
+<style>
+	#draggable 
+	{
+    	position:absolute;
+    	zIndex:1;
+    	align:center;
+	}
+</style>
+<body>
+<div id="buttonsAndImageDiv">
+	<!--
+	The goal is to append iamges to the imageDiv. I plan to have an array that appends 
+	all the images it contains to to this div
+	-->
+	<div id="draggable">
+	<div id="imageDiv"></div> 
+	</div>
+</div>
+</body>
+
+<script>
+  x =0
+  y = 0
+//I am opening a second script tag to keep space between the jqury and the javascript
+//This space is for the jqury
+	$("#draggable").draggable({	});
+	$('buttons').css('z-index', '1000');
+
+</script>
+
+
+</html>
+

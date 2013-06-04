@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>InfoForest</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+  <!--Including the CITE object file and the helper file.
+  The helper file "./cite_obj_interface2.js" can be inlinned into this file later -->
+<script type="text/javascript" language="Javascript" SRC="./js/citeJB.js"></script>
+<script type="text/javascript" language="Javascript" SRC="./js/cite_obj_interface2.js"></script>
+
+   <!-- This is the js file specifically for this Page -->
+<script type="text/javascript" language="Javascript" SRC="./js/userControl.js"></script>
+
+</head>
+
+<body>
+
+	<div id="wrapper_MAIN">
+    
+    	<div id="wrapper_TOP">
+        	<div id="top_home"><a href="#"><img src="assets/layout/home.png" width="75" height="50" alt="About" /></a></div>
+        	
+            <div id="top_about">
+        	  <p><a href="#">About</a></p>
+        	</div>
+            
+            <div id="top_title">
+       	    	<h1>Chad Gospels</h1>
+       	    </div>
+                        
+   	  	  <div id="top_infoforest">
+       	    	<p><a href="#">InfoForest</a></p>
+       	  	</div>
+		</div>
+        
+        <div id="wrapper_THUMBS">
+        	
+  
+          	
+          	 <div class="thumb"  id="Check_ChadRGB.Chad"  onclick="updateLayers(this)"  layerNum="0" checked="true"><img src="assets/page_thumbs/Chad-077-1929.jpg" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb"  id="Check_ChadPOC.Chad-Multispectral1-" onclick="updateLayers(this)" layerNum="1" checked="true"> <img src="assets/page_thumbs/Chad-077-1962.jpg" width="75" height="100" class="unselected"  /></div>
+            <div class="thumb" id="Check_ChadPOC.Chad-Background-" onclick="updateLayers(this)" layerNum="2"checked="true"><img src="assets/page_thumbs/Chad-077-2003.jpg" width="75" height="100" class="unselected"  /></div>
+            <div class="thumb" id="Check_ChadPOC.Chad-Latin-" onclick="updateLayers(this)" layerNum="3"checked="true"><img src="assets/page_thumbs/Chad-077-2012.jpg" width="75" height="100" class="unselected" /></div>
+            <div class="thumb" id="Check_ChadPOC.Chad-English-" onclick="updateLayers(this)"layerNum="4"checked="true"><img src="assets/page_thumbs/Chad-077-f-m-median-heq.jpg" width="75" height="100" class="unselected" /></div>
+            <div class="thumb_SELECTED" id="Check_ChadPOC.Chad-2003-" onclick="updateLayers(this)" layerNum="5" checked="true" ><img src="assets/page_thumbs/Chad-077-f-m-max-heq.jpg" width="75" height="100" class="unselected" /></div>
+            <div class="thumb" id="Check_ChadPOC.Chad-1962-" onclick="updateLayers(this)" layerNum="6" checked="true"><img src="assets/page_thumbs/Chad-077-f-m-mean-heq.jpg" width="75" height="100" class="unselected"  /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-1929-" onclick="updateLayers(this)" layerNum="7" checked="true"><img src="assets/page_thumbs/Chad-077-f-m-median-heq.jpg" width="75" height="100" class="unselected" /></div>
+       </div> 
+      
+      <div id="page_slider_WRAPPER"><img src="assets/layout/page_navigation.png" width="1000" height="50" /></div>
+      
+      	<div id="content_WRAPPER">
+      		<div id="page_nav_LEFT">
+            	<div id="zoom_nav_LEFT"><img src="assets/layout/zoom.png" alt="zoom" width="20" height="200" class="center" usemap="#zoomMap" /></div>
+                <div id="page_BACK"><img src="assets/layout/arrow_LEFT.png" width="50" height="300" /></div>
+            </div>
+            <div id="page_CONTAINER">     <iframe  frameBorder="0" align="justify" id="myFrame" width="900" height="1200" src="clean2.html" ></iframe>    <!--<img src="assets/page_large/Chad-077-f-m-mean-heq.jpg" width="900" height="1200" /> --></div>
+            <div id="page_nav_RIGHT">
+            	<div id="zoom_nav_RIGHT"></div>
+                <div id="page_ADVANCE"><img src="assets/layout/arrow_RIGHT.png" width="50" height="300" /></div>
+            </div>
+      	</div>
+      </div>
+    
+    </div>
+
+	<!-- This maps the zoomImage to the the functions that adjust the zoom-->
+<map name="zoomMap">
+
+   <area shape="rect" 
+            coords="0,0,20,20"
+     		alt="Bigger?" 
+            onclick ="bigger()"/>
+
+   <area shape="rect" 
+            coords="0,180,20,200"
+             alt="Smaller?" 
+            onclick ="smaller()"/>;
+</map>
+
+
+</body>
+</html>

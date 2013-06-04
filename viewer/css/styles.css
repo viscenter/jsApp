@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body,p,h1,h2,h3,h4,h5,ul,li{
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	background-color:#CCC;
+}
+
+/*WRAPPER MAIN
+-------------------------------------------------------------------------------------------------*/
+#wrapper_MAIN{
+	width:1000px;
+	margin:0px auto;
+}
+
+/*WRAPPER TOP
+-------------------------------------------------------------------------------------------------*/
+#wrapper_TOP{
+	width:1000px;
+	height:50px;
+	background-image:url(../assets/layout/wrapper_TOP_BG.png);
+	background-repeat:repeat-x;
+}
+
+/*TOP HOME
+-------------------------------------------------------------------------------------------------*/
+#top_home{
+	width:75px;
+	height:50px;
+	float:left;
+}
+
+/*TOP ABOUT
+-------------------------------------------------------------------------------------------------*/
+#top_about{
+	width:75px;
+	height:50px;
+	float:left;
+}
+
+#top_about p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+}
+
+#top_about a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:none;
+}
+
+#top_about a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:underline;
+}
+
+/*TOP TITLE
+-------------------------------------------------------------------------------------------------*/
+#top_title{
+	width:725px;
+	height:50px;
+	float:left;
+}
+
+#top_title h1{
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:20px;
+	color:#333;
+	padding:15px 20px 0px 0px;
+}
+
+/*TOP INFO FOREST
+-------------------------------------------------------------------------------------------------*/
+#top_infoforest{
+	width:125px;
+	height:50px;
+	float:left;
+}
+
+#top_infoforest p{
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:right;
+	font-size:16px;
+	color:#333;
+	padding:15px 20px 0px 0px;
+}
+
+#top_infoforest a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:none;
+}
+
+#top_infoforest a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;s
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:underline;
+}
+
+/*THUMBS
+-------------------------------------------------------------------------------------------------*/
+#wrapper_THUMBS{
+	width:1000px;
+	height:150px;
+	background-image:url(../assets/layout/thumb_wrapper_BG.png);
+	background-repeat:repeat-x;
+}
+
+.unselected{
+	display:block;
+	margin:25px auto;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.selected {
+	display:block;
+	margin:15px auto;
+	border:#FFF solid 5px;
+}
+
+/*PAGE SELECTOR
+-------------------------------------------------------------------------------------------------*/
+#page_slider_WRAPPER{
+	width:1000px;
+	height:50px;
+	background-image:url(../assets/layout/wrapper_TOP_BG.png);
+	background-repeat:repeat-x;
+}
+
+/*PAGE VIEWER
+-------------------------------------------------------------------------------------------------*/
+#content_WRAPPER{
+	width:1000px;
+	padding:25px 0px 0px 0px;
+	background-color:#000;
+	float:left;
+}
+
+/*PAGE NAVIGATION 
+-------------------------------------------------------------------------------------------------*/
+#page_nav_LEFT{
+	width:50px;
+	padding:0px;
+	background-color:#000;
+	float:left;
+}
+
+#zoom_nav_LEFT{
+	width:50px;
+	height:200px;
+}
+
+#page_BACK{
+	width:50px;
+	height:500px;
+	padding:300px 0px 0px 0px;
+}
+
+#page_CONTAINER{
+	width:900px;
+	padding:0px;
+	background-color:#000;
+	float:left;
+}
+
+#page_nav_RIGHT{
+	width:50px;
+	padding:0px;
+	background-color:#000;
+	float:left;
+}
+
+#zoom_nav_RIGHT{
+	width:50px;
+	height:200px;
+}
+
+#page_ADVANCE{
+	width:50px;
+	height:500px;
+	padding:300px 0px 0px 0px;
+}
+
+img.center{
+	display:block;
+	margin:0px auto;
+}
+
+/*MISC
+-------------------------------------------------------------------------------------------------*/
+.thumb{
+	float:left;
+	width:125px;
+	height:150px;
+	/*background-image:url(../assets/layout/thumb_BG.png);
+	background-repeat:no-repeat;*/
+	margin:0px auto;
+}
+
+.thumb_SELECTED{
+	float:left;
+	width:125px;
+	height:150px;
+	/*background-image:url(../assets/layout/thumb_BG_SELECTED.png);
+	background-repeat:no-repeat;*/
+margin:0px;
+	
+}
+
+.clear{
+	clear:both;
+}
