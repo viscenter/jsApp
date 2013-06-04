@@ -136,7 +136,7 @@ function getlayers()
 		//temp.onload = frustration;
 	    temp.src = chad_cite_Layers.update();
 	    temp.height = imageSize;
-	   // temp.width = imageSize;
+	    temp.width = imageSize;
 	    temp.name ="SingleMainImage";
 	    //temp.id = layerNames[counter];
 	    temp.id = name;
