@@ -1,13 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body,p,h1,h2,h3,h4,h5,ul,li{
-	padding:0px;
-	margin:0px;
+html, body, ul, li, ol, p, h1, h2, h3, h4, h5, h6, form, fieldset{
+margin:0px;
+padding:0px;
+border:0px;
 }
 
 body{
-	background-color:#CCC;
+	background-color:#FFF;
 }
 
 /*WRAPPER MAIN
@@ -117,9 +118,10 @@ body{
 -------------------------------------------------------------------------------------------------*/
 #wrapper_THUMBS{
 	width:1000px;
-	height:150px;
+	height:151px;
 	background-image:url(../assets/layout/thumb_wrapper_BG.png);
 	background-repeat:repeat-x;
+	border-bottom:#CCC solid 1px;
 }
 
 .unselected{
@@ -159,7 +161,7 @@ body{
 #page_nav_LEFT{
 	width:50px;
 	padding:0px;
-	background-color:#000;
+	background-color:;
 	float:left;
 }
 
@@ -171,6 +173,7 @@ body{
 #zoom_in{
 	width:50px;
 	height:50px;
+	padding:0px 0px 0px 0px;
 	opacity:0.8;
 }
 
@@ -178,6 +181,11 @@ body{
 	width:50px;
 	height:50px;
 	opacity:0.8;
+	margin:0px 0px 0px 0px;
+}
+
+img.zoom{
+	padding:10px 0px 0px 10px
 }
 
 #page_BACK{
@@ -238,7 +246,7 @@ img.center{
 	height:150px;
 	/*background-image:url(../assets/layout/thumb_BG_SELECTED.png);
 	background-repeat:no-repeat;*/
-margin:0px;
+	margin:0px;
 	
 }
 
