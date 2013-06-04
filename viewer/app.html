@@ -39,24 +39,29 @@
         	
   
           	
-          	<div class="thumb"  id="Check_ChadRGB.Chad"  onclick="updateLayers(this)"  layerNum="0" checked="true"><img src="" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb"  id="Check_ChadPOC.Chad-Multispectral1-" onclick="updateLayers(this)" layerNum="1" checked="true"> <img src="" width="75" height="100" class="unselected"  /></div>
-            <div class="thumb" id="Check_ChadPOC.Chad-Background-" onclick="updateLayers(this)" layerNum="2"checked="true"><img src="" width="75" height="100" class="unselected"  /></div>
-            <div class="thumb" id="Check_ChadPOC.Chad-Latin-" onclick="updateLayers(this)" layerNum="3"checked="true"><img src="" width="75" height="100" class="unselected" /></div>
-            <div class="thumb" id="Check_ChadPOC.Chad-English-" onclick="updateLayers(this)"layerNum="4"checked="true"><img src="" width="75" height="100" class="unselected" /></div>
-            <div class="thumb" id="Check_ChadPOC.Chad-2003-" onclick="updateLayers(this)" layerNum="5" checked="true" ><img src="" width="75" height="100" class="unselected" /></div>
-            <div class="thumb" id="Check_ChadPOC.Chad-1962-" onclick="updateLayers(this)" layerNum="6" checked="true"><img src="" width="75" height="100" class="unselected"  /> </div>
-            <div class="thumb" id="Check_ChadPOC.Chad-1929-" onclick="updateLayers(this)" layerNum="7" checked="true"><img src="" width="75" height="100" class="unselected" /></div>
+          	<div class="thumb"  id="Check_ChadRGB.Chad"  onclick="updateLayers(this)"  layerNum="0" checked="true"> <img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb"  id="Check_ChadPOC.Chad-Multispectral1-" onclick="updateLayers(this)" layerNum="1" checked="true"> <img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-Background-" onclick="updateLayers(this)" layerNum="2"checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-Latin-" onclick="updateLayers(this)" layerNum="3"checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-English-" onclick="updateLayers(this)"layerNum="4"checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-2003-" onclick="updateLayers(this)" layerNum="5" checked="true" ><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-1962-" onclick="updateLayers(this)" layerNum="6" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
+            <div class="thumb" id="Check_ChadPOC.Chad-1929-" onclick="updateLayers(this)" layerNum="7" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
        </div> 
       
       <!--<div id="page_slider_WRAPPER"><img src="assets/layout/page_navigation.png" width="1000" height="50" /></div>-->
       
       	<div id="content_WRAPPER">
       		<div id="page_nav_LEFT">
-            	<div id="zoom_nav_LEFT"><img src="assets/layout/zoom.png" alt="zoom" width="20" height="200" class="center" usemap="#zoomMap" /></div>
+            
+            <div id="zoom_nav_LEFT">
+            	<div id="zoom_in"><img src="assets/layout/zoom_in.png" width="50" height="50" alt="Zoom In" onclick ="bigger()" /></div>
+                <div id="zoom_out"><img src="assets/layout/zoom_out.png" width="50" height="50" alt="Zoom Out" onclick ="smaller()" /></div>
+            </div>
+            	
                 <div id="page_BACK"><img src="assets/layout/arrow_LEFT.png" width="50" height="300" /></div>
             </div>
-            <div id="page_CONTAINER">     <iframe  frameBorder="0" align="justify" id="myFrame" src="./clean.html" ></iframe>    <!--<img src="assets/page_large/Chad-077-f-m-mean-heq.jpg" width="900" height="1200" /> --></div>
+            <div id="page_CONTAINER">     <iframe  frameBorder="0" align="justify" id="myFrame" src="./clean.html" ></iframe>    </div>
             <div id="page_nav_RIGHT">
             	<div id="zoom_nav_RIGHT"></div>
                 <div id="page_ADVANCE"><img src="assets/layout/arrow_RIGHT.png" width="50" height="300" /></div>
@@ -65,20 +70,6 @@
       </div>
     
     </div>
-
-	<!-- This maps the zoomImage to the the functions that adjust the zoom-->
-<map name="zoomMap">
-
-   <area shape="rect" 
-            coords="0,0,20,20"
-     		alt="Bigger?" 
-            onclick ="bigger()"/>
-
-   <area shape="rect" 
-            coords="0,180,20,200"
-             alt="Smaller?" 
-            onclick ="smaller()"/>
-</map>
 
 
 </body>
