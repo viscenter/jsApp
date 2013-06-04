@@ -89,7 +89,7 @@ function bigger()
 	//window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)   ;
 	
 document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)+(3/2)*imageSize/2) -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)+(3/2)*imageSize/2)-600'
+document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)+(3/2)*imageSize/2)-600;
 	
 	imageSize = (imageSize*3)/2;
 	displayLayers();
