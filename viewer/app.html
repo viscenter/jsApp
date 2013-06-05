@@ -55,16 +55,16 @@
       		<div id="page_nav_LEFT">
             
             <div id="zoom_nav_LEFT">
-            	<div id="zoom_in"><img src="assets/layout/zoom_in.png" alt="Zoom In" title="Zoom In" width="40" height="40" class="zoom" onclick ="bigger()" onmouseover="this.style.opacity='.5'" onmouseout="this.style.opacity='1'" /></div>
-                <div id="zoom_out"><img src="assets/layout/zoom_out.png" alt="Zoom Out" title="Zoom Out" width="40" height="40" class="zoom" onclick ="smaller()" onmouseover="this.style.opacity='.5'" onmouseout="this.style.opacity='1'"/></div>
+            	<div id="zoom_in"><img id="zoomInImg" src="assets/layout/zoom_in.png" alt="Zoom In" title="Zoom In" width="40" height="40" class="zoom" onclick ="bigger()" onmouseover="document.getElementById('zoomInImg').style.opacity='.5'" onmouseout="document.getElementById('zoomInImg').style.opacity='1'" /></div>
+                <div id="zoom_out"><img id="zoomOutImg" src="assets/layout/zoom_out.png" alt="Zoom Out" title="Zoom Out" width="40" height="40" class="zoom" onclick ="smaller()" onmouseover="document.getElementById('zoomOutImg').style.opacity='.5'" onmouseout="document.getElementById('zoomOutImg').style.opacity='1'"/></div>
             </div>
             	
-                <div id="page_BACK"><img src="assets/layout/arrow_LEFT.png" alt="Previous Page" title="Previous Page" width="50" height="300" /></div>
+                <div id="page_BACK"><img id="backImg" src="assets/layout/arrow_LEFT.png" alt="Previous Page" title="Previous Page" width="50" height="300"    onmouseover="document.getElementById('backImg').style.opacity='.5'" onmouseout="document.getElementById('backImg').style.opacity='1'"/></div>
             </div>
             <div id="page_CONTAINER">     <iframe  frameBorder="0" align="justify" id="myFrame" src="./clean.html" ></iframe>    </div>
             <div id="page_nav_RIGHT">
             	<div id="zoom_nav_RIGHT"></div>
-                <div id="page_ADVANCE"><img src="assets/layout/arrow_RIGHT.png" alt="Next Page" title="Next Page" width="50" height="300" /></div>
+                <div id="page_ADVANCE"><img id="nextImg" src="assets/layout/arrow_RIGHT.png" alt="Next Page" title="Next Page" width="50" height="300"     onmouseover="document.getElementById('nextImg').style.opacity='.5'" onmouseout="document.getElementById('nextImg').style.opacity='1'"/></div>
             </div>
       	</div>
       </div>

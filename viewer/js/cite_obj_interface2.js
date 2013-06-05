@@ -5,6 +5,7 @@
 //In development this file was helpful.
 
 
+"use strict";
 
 //setUpObj
 //----------------
@@ -102,7 +103,7 @@ function GoToPage(pageNum)
 function setUpThumbNail()
 {
  
-  ThumbNail_cite = new citeUrn("/amphoreus.hpcc.uh.edu", //set server
+  var ThumbNail_cite = new citeUrn("/amphoreus.hpcc.uh.edu", //set server
   "/tomcat/chsimg/Img",                               //set dir
   "cite",                                             // set CITE namespace
   "fufolioimg",                                       //set CITE work ID

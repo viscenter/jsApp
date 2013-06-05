@@ -13,6 +13,7 @@
 //The methodes  above all return a string that is the source of an image.
 
 
+"use strict";
 
 
 //citeUrn

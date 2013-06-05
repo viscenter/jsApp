@@ -1,16 +1,19 @@
+"use strict";
+
+
 	setUpObj_Layers();      //Running the helper function to set up the CITE objects
 	setUpThumbNail();//Same as above for smaller images
 	
-	totalListOfLayers = new Array(); //We only create this once and keep this array till the end
+	var totalListOfLayers = new Array(); //We only create this once and keep this array till the end
 	                                 //It will hold a max of 5 images for our uses
      
-    currentListOfLayers = new Array(); //We only create this once and keep this array till the end
+    var currentListOfLayers = new Array(); //We only create this once and keep this array till the end
                                         //This is holds the images that we are currently viewing. 
                                         //It's elements will always be a subset of the totalListOfImages
   
   
 
-	imageSize = 750;//This is bad form
+	var imageSize = 750;//This is bad form
   			     //This value holds the state of the zoom for all images
   					
 
@@ -88,8 +91,8 @@ function bigger()
 	//window.frames['myFrame'].document.getElementById("draggable").style.left = parseInt(x,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
 	//window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)   ;
 	
-document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)-((3/2)*imageSize -imageSize)/2);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)-((3/2)*imageSize -imageSize)/2);
+document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((3/2)*imageSize -imageSize)/2)*((400/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((3/2)*imageSize -imageSize)/2)*((600/imageSize-parseInt(y,0))/600.0/imageSize);
 	
 	imageSize = (imageSize*3)/2;
 	displayLayers();
@@ -104,8 +107,8 @@ function smaller()
 {
 	var y =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top;
 	var x =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = (parseInt(x,0)-((2/3)*imageSize -imageSize)/2);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = (parseInt(y,0)-((2/3)*imageSize -imageSize)/2) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((2/3)*imageSize -imageSize)/2)*((400.0/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((2/3)*imageSize -imageSize)/2)*((600.0/imageSize-parseInt(y,0))/600.0/imageSize) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
 	imageSize = 2*(imageSize/3);
 	displayLayers();
 }
@@ -133,7 +136,7 @@ function getlayers()
 
 	for (name in layers)
 	{
-		temp = new Image();
+		var temp = new Image();
 		//chad_cite_Layers.setLayer(layerNames[counter]);
 		chad_cite_Layers.setLayer(name);
 		//temp.onload = frustration;
@@ -297,7 +300,6 @@ function upDateThumb()
 	}
 }
 upDateThumb()
-
 
 
 
