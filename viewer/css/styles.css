@@ -118,17 +118,17 @@ body{
 -------------------------------------------------------------------------------------------------*/
 #wrapper_THUMBS{
 	width:1000px;
-	height:151px;
+	height:150px;
 	background-image:url(../assets/layout/thumb_wrapper_BG.png);
 	background-repeat:repeat-x;
-	border-bottom:#CCC solid 1px;
 }
 
 .unselected{
 	display:block;
 	margin:25px auto;
-	opacity:0.4;
+	/*opacity:0.4;*/
 	filter:alpha(opacity=40); /* For IE8 and earlier */
+	border:#999 solid 2px;
 	background-color:#FFF;
 }
 
@@ -136,6 +136,7 @@ body{
 	display:block;
 	margin:15px auto;
 	border:#FFF solid 5px;
+	background-color:#FFF;
 }
 
 /*PAGE SELECTOR
