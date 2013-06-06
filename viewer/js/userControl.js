@@ -47,8 +47,9 @@ setThumb()
 function prev()
 { 
 	chad_cite_Layers.prevPage();
+	loadImageInThumb();
     getlayers();
-    upDateThumb()
+
    // displayLayers();
 }
 
@@ -60,9 +61,22 @@ function next()
     //	totalListOfLayers[i].onload = displayLayers();				
     //	alert(i + " onload");							
     //}
+    loadImageInThumb();
     getlayers();
-    upDateThumb()
+
     //displayLayers()
+}
+
+function loadImageInThumb()
+{
+	var listOfThumb = document.getElementsByClassName("thumb");
+	for(var i = 0; i<listOfThumb.length;i++)
+	{
+		listOfThumb[i].children[0].src =  "./assets/page_thumbs/thumb_loader.gif";
+		//listOfThumb[0][i].style.opacity = .3;
+		//alert("setThumb")
+	}
+
 }
 
 //bigger()
