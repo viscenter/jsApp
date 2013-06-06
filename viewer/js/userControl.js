@@ -17,7 +17,8 @@
   			     //This value holds the state of the zoom for all images
   					
 	var scale = 1.0;
-  
+    var imageHeight = -1;
+    var imageWidth =-1;
   	
    var layers = {
    "ChadRGB.Chad":0,
@@ -70,6 +71,10 @@ function next()
 //Bigger sets the "imageSize" then has the images redrawn
 function bigger()
 {
+	if(imageHeight === -1)
+		imageHeight == totalListOfLayers[0].height;
+	if(imageWidth ===-1)
+		imageWidth = totalListOfLayers[0].width;
 
 	
 	var y = document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top;
@@ -80,8 +85,8 @@ function bigger()
 document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((3/2)*imageSize -imageSize)/2)*((400/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
 document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((3/2)*imageSize -imageSize)/2)*((600/imageSize-parseInt(y,0))/600.0/imageSize);
 	
-	//imageSize = (imageSize*3)/2;
-	scale =  3.0/2.0;
+	imageHeight = imageHeight *3.0 / 2.0;
+	imageWidth = imageWidth *3.0 / 2.0;
 	displayLayers();
 }
 
@@ -92,12 +97,22 @@ document.getElementById("myFrame").contentDocument.getElementById("draggable").s
 //Bigger sets the "imageSize" then has the images redrawn
 function smaller()
 {
+	if(imageHeight === -1)
+		imageHeight == totalListOfLayers[0].height;
+	if(imageWidth ===-1)
+		imageWidth = totalListOfLayers[0].width;
+
+
+
 	var y =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top;
 	var x =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((2/3)*imageSize -imageSize)/2)*((400.0/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((2/3)*imageSize -imageSize)/2)*((600.0/imageSize-parseInt(y,0))/600.0/imageSize) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
 	//imageSize = 2*(imageSize/3);
-	scale = 2.0 /3.0;
+	
+	imageHeight = imageHeight *2.0 / 3.0;
+	imageWidth = imageWidth *2.0 / 3.0;
+
 	displayLayers();
 }
 
@@ -179,8 +194,11 @@ function displayLayers()
 	while(counter < currentListOfLayers.length)
 	{
 		currentListOfLayers[counter].align="center";
-		currentListOfLayers[counter].width =  currentListOfLayers[counter].width * scale ;//imageSize
-		currentListOfLayers[counter].height = currentListOfLayers[counter].height *scale ;//imageSize; 
+		// =  currentListOfLayers[counter].width * scale ;//imageSize
+		//= currentListOfLayers[counter].height *scale ;//imageSize; 
+		
+		currentListOfLayers[counter].width  =imageWidth;
+		currentListOfLayers[counter].height  = imageWidth;
 		currentListOfLayers[counter].style.opacity = 1.0/currentListOfLayers.length;
 		//(window.frames['myFrame'].document.getElementById("imageDiv")).appendChild(currentListOfLayers[counter]);
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").appendChild(currentListOfLayers[counter]);
@@ -190,44 +208,7 @@ function displayLayers()
 }
 
 
-//function frustration()
-//{
-//	
-//	currentListOfLayers = [];
-//	for(var i = 0; i < totalListOfLayers.length; i++)
-//	{
-//		updateLayers(i);
-//	}
-//	displayLayers();
-//}
 
-//imageLoaded(layerIndex)
-//------------
-//This is the code that will run after an image has fully loaded
-//function imageLoaded( layerIndex)
-//{
-//  var counter =  0;
-// while(counter  < currentListOfLayers.length)
-//	{
-//		if(currentListOfLayer[counter].id == layerNames[layerIndex])  //if this is true, then the Image that was just loaded needs to be displayed
-//		{
-//		listOfChildren = window.frames['myFrame'].document.getElementById("imageDiv").childNodes;
-//		var innerCounter = 0;
-//		alert("imageLoaded " + layerIndex);
-//
-//			while(innerCounter > listOfChildren)
-//			{
-//			if(listOfChildren[innerCounter] == layerNames[layerIndex])
-//				{
-//					 alert("imageLoaded " + layerIndex);
-//					window.frames['myFrame'].document.getElementById("imageDiv").removeChild(listOfChildren[innerCounter]);
-//					window.frames['myFrame'].document.getElementById("imageDiv").appendChild(currentListOfLayers[counter]);
-//				}		
-//			}
-//		}
-//		counter = counter + 1;
-// }	
-//}
 
 
 //updateLayers()
