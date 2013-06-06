@@ -16,7 +16,7 @@
 	var imageSize = 750;//This is bad form
   			     //This value holds the state of the zoom for all images
   					
-
+	var scale = 1.0;
   
   	
    var layers = {
@@ -32,24 +32,8 @@
    
 
 
-
-
-
-
-
-
-
-
 //html was here
 //////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
 
 
 
@@ -63,6 +47,7 @@ function prev()
 { 
 	chad_cite_Layers.prevPage();
     getlayers();
+    upDateThumb()
    // displayLayers();
 }
 
@@ -75,6 +60,7 @@ function next()
     //	alert(i + " onload");							
     //}
     getlayers();
+    upDateThumb()
     //displayLayers()
 }
 
@@ -94,7 +80,8 @@ function bigger()
 document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((3/2)*imageSize -imageSize)/2)*((400/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
 document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((3/2)*imageSize -imageSize)/2)*((600/imageSize-parseInt(y,0))/600.0/imageSize);
 	
-	imageSize = (imageSize*3)/2;
+	//imageSize = (imageSize*3)/2;
+	scale =  3.0/2.0;
 	displayLayers();
 }
 
@@ -109,7 +96,8 @@ function smaller()
 	var x =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((2/3)*imageSize -imageSize)/2)*((400.0/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((2/3)*imageSize -imageSize)/2)*((600.0/imageSize-parseInt(y,0))/600.0/imageSize) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
-	imageSize = 2*(imageSize/3);
+	//imageSize = 2*(imageSize/3);
+	scale = 2.0 /3.0;
 	displayLayers();
 }
 
@@ -133,24 +121,27 @@ function getlayers()
 	
 	
 	totalListOfLayers = [];
+	var i = 0;
 
 	for (name in layers)
 	{
 		var temp = new Image();
+		var hold = i;
 		//chad_cite_Layers.setLayer(layerNames[counter]);
 		chad_cite_Layers.setLayer(name);
-		//temp.onload = frustration;
+		temp.onload = function() {document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src};//{document.getElementsByClassName("thumb")[hold].children[hold].src = totalListOfLayers[hold].src };
 	    temp.src = chad_cite_Layers.update();
-	    temp.height = imageSize;
-	    temp.width = imageSize;
+	  //temp.height ="100%";// imageSize;
+	  //temp.width = imageSize;
+	    temp.setAttribute("number",i.toString())
 	    temp.name ="SingleMainImage";
 	    //temp.id = layerNames[counter];
 	    temp.id = name;
 	    temp.style.position = 'absolute'
 		totalListOfLayers.push(temp);   
 		//alert("hello");
+		i = i +1;
 	}
-	
 	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)
 	{
@@ -188,8 +179,8 @@ function displayLayers()
 	while(counter < currentListOfLayers.length)
 	{
 		currentListOfLayers[counter].align="center";
-		currentListOfLayers[counter].width =  imageSize;
-		currentListOfLayers[counter].height = imageSize; 
+		currentListOfLayers[counter].width =  currentListOfLayers[counter].width * scale ;//imageSize
+		currentListOfLayers[counter].height = currentListOfLayers[counter].height *scale ;//imageSize; 
 		currentListOfLayers[counter].style.opacity = 1.0/currentListOfLayers.length;
 		//(window.frames['myFrame'].document.getElementById("imageDiv")).appendChild(currentListOfLayers[counter]);
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").appendChild(currentListOfLayers[counter]);
