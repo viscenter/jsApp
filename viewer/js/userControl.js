@@ -86,7 +86,7 @@ function loadImageInThumb()
 function bigger()
 {
 	if(imageHeight === -1)
-		imageHeight == totalListOfLayers[0].height;
+		imageHeight = totalListOfLayers[0].height;
 	if(imageWidth ===-1)
 		imageWidth = totalListOfLayers[0].width;
 
@@ -112,7 +112,7 @@ document.getElementById("myFrame").contentDocument.getElementById("draggable").s
 function smaller()
 {
 	if(imageHeight === -1)
-		imageHeight == totalListOfLayers[0].height;
+		imageHeight = totalListOfLayers[0].height;
 	if(imageWidth ===-1)
 		imageWidth = totalListOfLayers[0].width;
 
@@ -212,7 +212,7 @@ function displayLayers()
 		//= currentListOfLayers[counter].height *scale ;//imageSize; 
 		
 		currentListOfLayers[counter].width  =imageWidth;
-		currentListOfLayers[counter].height  = imageWidth;
+		currentListOfLayers[counter].height  = imageHeight;
 		currentListOfLayers[counter].style.opacity = 1.0/currentListOfLayers.length;
 		//(window.frames['myFrame'].document.getElementById("imageDiv")).appendChild(currentListOfLayers[counter]);
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").appendChild(currentListOfLayers[counter]);

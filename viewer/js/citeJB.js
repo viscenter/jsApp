@@ -157,6 +157,16 @@ function citeUrn(server,dir, citeNS, workID, collectionID ,defaultImageSize, pag
   	}
   }
   
+  //getPageNumber
+  //------------------
+  //This function returns the page number that the object is pointed to.
+  //Having this function make accessing this value from client code more natural
+  this.getPageNumber = getPageNumber;
+  function getPageNumber()
+  {
+    return this.pageNumber;
+  }
+  
   
 
   
