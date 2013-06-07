@@ -101,7 +101,7 @@ function citeUrn(server,dir, citeNS, workID, collectionID ,defaultImageSize, pag
   function setPage( inPage)
   { 
 	//if( inPage > minPage && inPage < maxPage)
-	if( inPage > 1 && inPage < this.maxPage )
+	if( inPage > 0 && inPage < this.maxPage )
 		{
 			this.pageNumber = inPage;
 			this.buildUrl();
