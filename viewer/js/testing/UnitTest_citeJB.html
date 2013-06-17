@@ -113,7 +113,7 @@ function prev()
 
 function gotoPage()
 {
-	x[9].innerHTML = testObject.setPage(document.getElementById("PageForm").value);
+	x[9].innerHTML = testObject.setPage(parseInt(document.getElementById("PageForm").value));
 	document.getElementById("disp").onload = function(){x[9].style.backgroundColor = "green";}
 	document.getElementById("num").innerHTML = testObject.getPageNumber()
 	document.getElementById("disp").src = testObject.url;
