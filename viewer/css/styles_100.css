@@ -33,7 +33,7 @@ body {
 	width:100%;
 	height:100%;
 	position: absolute;
-	background-color:#666;
+	background-color:#000;
 	/*background-image:url(../assets/layout/backgrounds/louver_01.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
@@ -45,7 +45,7 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #header_MAIN{
 	width:100%;
-	height:200px;
+	height:250px;
 	position: absolute;
 	background-color:;
 	z-index:1;
@@ -58,6 +58,36 @@ body {
 	background-color:#000;
 	border-bottom:#666 solid 1px;
 	opacity:1.0;
+}
+
+/*ZOOM
+-------------------------------------------------------------------------------------------------*/
+#zoom{
+	width:100px;
+	height:50px;
+	margin:0px auto;
+	background-color:;
+	opacity:1.0;
+}
+
+#zoom_out{
+	width:50px;
+	height:50px;
+	margin:0px 0px 0px 0px;
+	float:left;
+	text-align:left;
+	display:block;
+	opacity:;
+}
+
+#zoom_in{
+	width:50px;
+	height:50px;
+	padding:0px 0px 0px 0px;
+	float:left;
+	text-align:right;
+	display:block;
+	opacity:;
 }
 
 
