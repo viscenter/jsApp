@@ -19,6 +19,8 @@
 	var scale = 1.0;
     var imageHeight = -1;
     var imageWidth =-1;
+    
+    
   	
    var layers = {
    "ChadRGB.Chad":0,
@@ -292,6 +294,9 @@ function upDateThumb()
 		//listOfThumb[0][i].style.opacity = .3;
 		//alert("setThumb")
 	}
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =0;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =0;
+	
 }
 upDateThumb()
 
