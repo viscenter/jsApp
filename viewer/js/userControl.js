@@ -95,14 +95,13 @@ function bigger()
 	
 	var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
 	var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
-	//window.frames['myFrame'].document.getElementById("draggable").style.left = parseInt(x,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-	//window.frames['myFrame'].document.getElementById("draggable").style.top  = parseInt(y,0) - (( (3.0/2.0)*(imageSize)  - imageSize)/2)   ;
-	
-    //document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((3/2)*imageSize -imageSize)/2)*((400/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-    //document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((3/2)*imageSize -imageSize)/2)*((600/imageSize-parseInt(y,0))/600.0/imageSize);
-	
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-450) * 3/2 + 450);//(450 - x)/imageWidth * 3/2 + x; 
-    document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = ((y-600) * 3/2 + 600);// (600-y)/imageHeight * 3/2 + y;
+   
+    var fWidth  = document.getElementById("myFrame").offsetWidth/2;
+    var fLenght = document.getElementById("myFrame").offsetLength/2;
+
+
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 3/2 + fWidth );//(450 - x)/imageWidth * 3/2 + x; 
+    document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  ((y-fLenght) * 3/2 + fLenght);// (600-y)/imageHeight * 3/2 + y;
 	
 	imageHeight = imageHeight *3.0 / 2.0;
 	imageWidth = imageWidth *3.0 / 2.0;
@@ -124,14 +123,13 @@ function smaller()
 
 	var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
 	var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
-	//var y =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top;
-	//var x =document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left;
-	//document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = parseInt(x,0)-(((2/3)*imageSize -imageSize)/2)*((400.0/imageSize-parseInt(x,0))/400.0/imageSize);// -450;//parseInt(x,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;//parseInt(x,0) - ((2.0/3.0)*(imageSize/4) )/2;
-	//document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = parseInt(y,0)-(((2/3)*imageSize -imageSize)/2)*((600.0/imageSize-parseInt(y,0))/600.0/imageSize) ;//-600;//parseInt(y,0) - (( (2.0/3.0)*(imageSize)  - imageSize)/2)  ;
-	//imageSize = 2*(imageSize/3);
+
+    var fWidth  = document.getElementById("myFrame").offsetWidth/2;
+    var fLenght = document.getElementById("myFrame").offsetLength/2;
+
 	
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-450) * 2/3 + 450) ;//(450 - x)/imageWidth * 2/3 + x; 
-    document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  = ((y-600) * 2/3 + 600); //(600-y)/imageHeight * 2/3 + y;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 2/3 + fWidth ) ;//(450 - x)/imageWidth * 2/3 + x; 
+    document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  ((y-fLenght) * 2/3 + fLenght); //(600-y)/imageHeight * 2/3 + y;
 	
 	
 	imageHeight = imageHeight *2.0 / 3.0;
