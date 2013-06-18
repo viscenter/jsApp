@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body, a, abbr, acronym, address, area, b, bdo, big, blockquote, button, caption, cite, code,
+col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img,
+ins, kbd, label, legend, li, map, object, ol, p, param, pre, q, samp, small, span, strong, sub,
+sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
+    padding: 0;
+    /*vertical-align: baseline;*/
+}
+
+body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  /*overflow-y: scroll;*/
+}
+
+body {
+  height: 100%;
+  /*background: #fff;
+  color: #444;
+  line-height: 1.4;*/
+}
+
+/*WRAPPER MAIN
+-------------------------------------------------------------------------------------------------*/
+#wrapper_MAIN{
+	width:100%;
+	height:100%;
+	position: absolute;
+	background-color:#666;
+	/*background-image:url(../assets/layout/backgrounds/louver_01.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;*/
+	z-index:0;
+}
+
+/*HEADER MAIN
+-------------------------------------------------------------------------------------------------*/
+#header_MAIN{
+	width:100%;
+	height:200px;
+	position: absolute;
+	background-color:;
+	z-index:1;
+	
+}
+
+#header{
+	width:100%;
+	height:50px;
+	background-color:#000;
+	border-bottom:#666 solid 1px;
+	opacity:1.0;
+}
+
+
+/*THUMBS
+-------------------------------------------------------------------------------------------------*/
+#thumbs_CONTAINER{
+	width:100%;
+	height:150px;
+	background-color:#000;
+	opacity:0.8;
+}
+
+#thumbs{
+	width:1000px;
+	height:150px;
+	margin:0px auto;
+}
+
+.unselected{
+	display:block;
+	margin:25px auto;
+	/*opacity:0.4;*/
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	border:#999 solid 2px;
+	background-color:#FFF;
+	opacity:1.0;
+}
+
+.selected {
+	display:block;
+	margin:15px auto;
+	border:#FFF solid 5px;
+	background-color:#FFF;
+}
+
+.thumb{
+	float:left;
+	width:125px;
+	height:150px;
+	/*background-image:url(../assets/layout/thumb_BG.png);
+	background-repeat:no-repeat;*/
+	margin:0px auto;
+}
+
+.thumb_SELECTED{
+	float:left;
+	width:125px;
+	height:150px;
+	/*background-image:url(../assets/layout/thumb_BG_SELECTED.png);
+	background-repeat:no-repeat;*/
+	margin:0px;
+	
+}
+
+/*HEADER MAIN
+-------------------------------------------------------------------------------------------------*/
+#content{
+	width:100%;
+	height:100%;
+	background-color:;
+}
+
+/*iFRAME
+-------------------------------------------------------------------------------------------------*/
+#myFrame{
+	width:100%;
+	height:100%;
+	z-index:;
+}
