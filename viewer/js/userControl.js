@@ -13,7 +13,7 @@
   
   
 
-	var imageSize = 750;//This is bad form
+	var imageSize = 1000;//This is bad form
   			     //This value holds the state of the zoom for all images
   					
 	var scale = 1.0;
@@ -292,11 +292,22 @@ function upDateThumb()
 		//listOfThumb[0][i].style.opacity = .3;
 		//alert("setThumb")
 	}
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =0;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =0;
+
 	
 }
 upDateThumb()
 
+
+
+
+function whenFrameLoads()
+{
+		console.log("Here")
+
+	var fWidth  = document.getElementById("myFrame").offsetWidth/2;
+
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageSize/2;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =0;
+}
 
 

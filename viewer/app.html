@@ -61,7 +61,7 @@
             	
                 <div id="page_BACK"><img id="backImg" src="assets/layout/arrow_LEFT.png" alt="Previous Page" title="Previous Page" width="50" height="300"  onclick="prev()"  onmouseover="document.getElementById('backImg').style.opacity='.5'" onmouseout="document.getElementById('backImg').style.opacity='1'"/></div>
             </div>
-            <div id="page_CONTAINER">     <iframe  frameBorder="0" align="justify" id="myFrame" src="./clean.html" ></iframe>    </div>
+            <div id="page_CONTAINER">     <iframe  frameBorder="0" align="justify" id="myFrame" src="./clean.html" onload="whenFrameLoads()" ></iframe>    </div>
             <div id="page_nav_RIGHT">
             	<div id="zoom_nav_RIGHT"></div>
                 <div id="page_ADVANCE"><img id="nextImg" src="assets/layout/arrow_RIGHT.png" alt="Next Page" title="Next Page" width="50" height="300"  onclick="next()"   onmouseover="document.getElementById('nextImg').style.opacity='.5'" onmouseout="document.getElementById('nextImg').style.opacity='1'"/></div>
