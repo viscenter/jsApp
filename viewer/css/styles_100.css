@@ -22,6 +22,7 @@ html {
 
 body {
   height: 100%;
+  background-color:#000;
   /*background: #fff;
   color: #444;
   line-height: 1.4;*/
@@ -45,14 +46,14 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #header_MAIN{
 	width:100%;
-	height:250px;
+	height:300px;
 	position: absolute;
 	background-color:;
 	z-index:1;
 	
 }
 
-#header{
+#top_CONTAINER{
 	width:100%;
 	height:50px;
 	background-color:#000;
@@ -60,34 +61,153 @@ body {
 	opacity:1.0;
 }
 
-/*ZOOM
--------------------------------------------------------------------------------------------------*/
-#zoom{
-	width:100px;
+#top{
+	width:1000px;
 	height:50px;
 	margin:0px auto;
-	background-color:;
+	display:block;
 	opacity:1.0;
 }
 
-#zoom_out{
-	width:50px;
+/*TOP LEFT
+-----------------------------------------------------------*/
+#top_LEFT{
+	width:75px;
 	height:50px;
+	float:left;
+}
+
+#top_LEFT p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+}
+
+#top_LEFT a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:none;
+}
+
+#top_LEFT a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:underline;
+}
+
+/*TOP CENTER
+-----------------------------------------------------------*/
+#top_CENTER{
+	width:725px;
+	height:50px;
+	float:left;
+}
+
+#top_CENTER h1{
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:20px;
+	color:#333;
+	padding:15px 20px 0px 0px;
+}
+
+/*TOP RIGHT
+-----------------------------------------------------------*/
+#top_RIGHT{
+	width:125px;
+	height:50px;
+	float:left;
+}
+
+#top_RIGHT p{
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:right;
+	font-size:16px;
+	color:#333;
+	padding:15px 20px 0px 0px;
+}
+
+#top_RIGHT a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:none;
+}
+
+#top_RIGHT a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;s
+	color:#333;
+	padding:15px 0px 0px 0px;
+	text-decoration:underline;
+}
+
+/*DESCRIPTION
+-------------------------------------------------------------------------------------------------*/
+#description_CONTAINER{
+	width:100%;
+	height:50px;
+	background-color:#000;
+	display:block;
+}
+
+#description{
+	width:1000px;
+	height:50px;
+	margin:0px auto;
+	display:block;
+	opacity:1.0;
+}
+
+#description p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:1.25em;
+	padding:0px 20px;
+	color:#CCC;
+}
+
+/*ZOOM
+-------------------------------------------------------------------------------------------------*/
+#zoom_CONTAINER{
+	width:100%;
+	height:50px;
+	background-color:;
+	/*background-image:url(../assets/layout/gradient.png);
+	background-repeat:repeat-x;*/
+}
+
+#zoom{
+	width:60px;
+	height:30px;
+	margin:0px auto;
+	background-color:;
+	opacity:1.0;
+	padding:5px 0px 0px 0px;
+}
+
+#zoom_out{
+	width:30px;
+	height:30px;
 	margin:0px 0px 0px 0px;
 	float:left;
 	text-align:left;
 	display:block;
-	opacity:;
 }
 
 #zoom_in{
-	width:50px;
-	height:50px;
+	width:30px;
+	height:30px;
 	padding:0px 0px 0px 0px;
 	float:left;
 	text-align:right;
 	display:block;
-	opacity:;
 }
 
 
@@ -97,7 +217,7 @@ body {
 	width:100%;
 	height:150px;
 	background-color:#000;
-	opacity:0.8;
+	opacity:0.85;
 }
 
 #thumbs{
@@ -113,7 +233,6 @@ body {
 	filter:alpha(opacity=40); /* For IE8 and earlier */
 	border:#999 solid 2px;
 	background-color:#FFF;
-	opacity:1.0;
 }
 
 .selected {
