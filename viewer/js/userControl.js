@@ -97,7 +97,7 @@ function bigger()
 	var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
    
     var fWidth  = document.getElementById("myFrame").offsetWidth/2;
-    var fLenght = document.getElementById("myFrame").offsetLength/2;
+    var fLenght = document.getElementById("myFrame").offsetHeight/2;
 
 
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 3/2 + fWidth );//(450 - x)/imageWidth * 3/2 + x; 
@@ -112,7 +112,7 @@ function bigger()
 //smaller()
 //---------
 //Smaller is called when the button with the "-" is clicked.
-//Bigger sets the "imageSize" then has the images redrawn
+//smaller sets the "imageSize" then has the images redrawn
 function smaller()
 {
 	if(imageHeight === -1)
@@ -125,7 +125,7 @@ function smaller()
 	var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
 
     var fWidth  = document.getElementById("myFrame").offsetWidth/2;
-    var fLenght = document.getElementById("myFrame").offsetLength/2;
+    var fLenght = document.getElementById("myFrame").offsetHeight/2;
 
 	
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 2/3 + fWidth ) ;//(450 - x)/imageWidth * 2/3 + x; 
@@ -250,32 +250,30 @@ function updateLayers(layerValue)
 	 	layerValue.setAttribute("checked","false")
 	    var pic = layerValue.children[0]
 	    pic.className = "selected";
-	   // pic.width=pic.width+20
-	   // pic.height=pic.height+20
-	   // pic.style.opacity = 1;
+
 	}
 	else
 	{
-	//layerValue.checked = true
-	//alert("set to false");
-	layerValue.setAttribute("checked","true")
-    var pic = layerValue.children[0]
-	pic.className = "unselected"
-	//pic.width=pic.width-20
-	//pic.height=pic.height-20
-	//pic.style.opacity = .3;
+		//alert("set to false");
+		layerValue.setAttribute("checked","true")
+		
+    	var pic = layerValue.children[0]
+		pic.className = "unselected"
+    
 
-	var i = 0;
-	while(i < currentListOfLayers.length)
+		var i = 0;
+		while(i < currentListOfLayers.length)
 		{
 			if( layerValue.id == "Check_"+currentListOfLayers[i].id)
 			{
 				currentListOfLayers[i]= currentListOfLayers[currentListOfLayers.length - 1];
-				currentListOfLayers.pop()		
+				currentListOfLayers.pop();		
 			}
 		i = i + 1;
 		}
 	}
+	
+	
 	displayLayers();
 	
 }
@@ -293,21 +291,32 @@ function upDateThumb()
 		//alert("setThumb")
 	}
 
-	
+   // totalListOfLayers[0].setAttribute("checked","false");
+    var x = document.getElementsByClassName("unselected");
+    x[0].className = "selected";
+    //totalListOfLayers[0].setAttribute("checked","true");
+    var y = document.getElementsByClassName("thumb");
+    
+    y[0].setAttribute("checked","false");
+    currentListOfLayers.push(totalListOfLayers[0]);
+    displayLayers();
 }
 upDateThumb()
 
 
 
-
+//whenFrameLoads()
+//-----------------
+//This function runs when the iframe has finished loading
+//It does some house keeping things for us.
 function whenFrameLoads()
 {
-		console.log("Here")
+	
 
 	var fWidth  = document.getElementById("myFrame").offsetWidth/2;
 
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageSize/2;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =0;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =300; //Size of the header bar above the image
 }
 
 
