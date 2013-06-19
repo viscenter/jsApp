@@ -303,7 +303,8 @@ function whenThumbMouseOver(that)
 }
 function clear()
 {
-document.getElementById("description").innerHTML ="";
+document.getElementById("description").innerHTML =" ";
+console.log("hello");
 
 }
 
@@ -331,13 +332,13 @@ function upDateThumb()
     
     var listOfDest=[];
     listOfDest[0] ="one";  listOfDest[1]="two"  ; listOfDest[2] ="three";
-    listOfDest[3] ="text"; listOfDest[4]="bored"; listOfDest[5] ="What is the meaning of life";
-    listOfDest[6] ="42 ?";  listOfDest[7]="last One";
+    listOfDest[3] ="four"; listOfDest[4]="five"; listOfDest[5] ="six";
+    listOfDest[6] ="seven";  listOfDest[7]="eight";
     console.log("stress");
     //Adding the descriptions
     for(var i = 0; i<y.length;i++)
     {
-	   y[i].setAttribute("description","<FONT COLOR=White>" + listOfDest[i]);
+	   y[i].setAttribute("description","<p>" + listOfDest[i]);
 	   console.log("here");
     }
 
