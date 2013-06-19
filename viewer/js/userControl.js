@@ -278,30 +278,7 @@ function updateLayers(layerValue)
 	
 }
 
-//setThumb()
-//There are several thumb nails at the top of the webpage and the correct image must be loaded into them.
-function upDateThumb()
-{
-//alert("setThumb")
-	var listOfThumb = document.getElementsByClassName("thumb");
-	for(var i = 0; i<listOfThumb.length;i++)
-	{
-		listOfThumb[i].children[0].src = totalListOfLayers[i].src;
-		//listOfThumb[0][i].style.opacity = .3;
-		//alert("setThumb")
-	}
 
-   // totalListOfLayers[0].setAttribute("checked","false");
-    var x = document.getElementsByClassName("unselected");
-    x[0].className = "selected";
-    //totalListOfLayers[0].setAttribute("checked","true");
-    var y = document.getElementsByClassName("thumb");
-    
-    y[0].setAttribute("checked","false");
-    currentListOfLayers.push(totalListOfLayers[0]);
-    displayLayers();
-}
-upDateThumb()
 
 
 
@@ -320,3 +297,49 @@ function whenFrameLoads()
 }
 
 
+function whenThumbMouseOver(that)
+{
+	document.getElementById("description").innerHTML = that.getAttribute("description");
+}
+function clear()
+{
+document.getElementById("description").innerHTML ="";
+
+}
+
+
+//setThumb()
+//There are several thumb nails at the top of the webpage and the correct image must be loaded into them.
+function upDateThumb()
+{
+//alert("setThumb")
+	var listOfThumb = document.getElementsByClassName("thumb");
+	for(var i = 0; i<listOfThumb.length;i++)
+	{
+		listOfThumb[i].children[0].src = totalListOfLayers[i].src;
+		//listOfThumb[0][i].style.opacity = .3;
+		//alert("setThumb")
+	}
+
+     //Make the first Image selected
+    var x = document.getElementsByClassName("unselected");
+    x[0].className = "selected";
+    var y = document.getElementsByClassName("thumb");
+    y[0].setAttribute("checked","false");
+    currentListOfLayers.push(totalListOfLayers[0]);
+    displayLayers();
+    
+    var listOfDest=[];
+    listOfDest[0] ="one";  listOfDest[1]="two"  ; listOfDest[2] ="three";
+    listOfDest[3] ="text"; listOfDest[4]="bored"; listOfDest[5] ="What is the meaning of life";
+    listOfDest[6] ="42 ?";  listOfDest[7]="last One";
+    console.log("stress");
+    //Adding the descriptions
+    for(var i = 0; i<y.length;i++)
+    {
+	   y[i].setAttribute("description","<FONT COLOR=White>" + listOfDest[i]);
+	   console.log("here");
+    }
+
+}
+upDateThumb()
