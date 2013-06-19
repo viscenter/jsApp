@@ -13,7 +13,7 @@
   
   
 
-	var imageSize = 1000;//This is bad form
+	var imageSize = 2000;//This is bad form
   			     //This value holds the state of the zoom for all images
   					
 	var scale = 1.0;
@@ -301,7 +301,7 @@ function whenThumbMouseOver(that)
 {
 	document.getElementById("description").innerHTML = that.getAttribute("description");
 }
-function clear()
+function clearText()
 {
 document.getElementById("description").innerHTML =" ";
 console.log("hello");
