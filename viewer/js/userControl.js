@@ -13,7 +13,7 @@
   
   
 
-	var imageSize = 2000;//This is bad form
+	var imageSize = 592;//This is bad form
   			     //This value holds the state of the zoom for all images
   					
 	var scale = 1.0;
@@ -174,15 +174,16 @@ function getlayers()
 		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;     
 		                          };
 	    temp.src = chad_cite_Layers.update();
-	  //temp.height ="100%";// imageSize;
-	  //temp.width = imageSize;
 	    temp.setAttribute("number",i.toString())
 	    temp.name ="SingleMainImage";
 	    //temp.id = layerNames[counter];
 	    temp.id = name;
-	    temp.style.position = 'absolute'
+	    temp.style.position = 'absolute';
+	    temp.width = "592";
+	    temp.height ="789";
+	    
 		totalListOfLayers.push(temp);   
-		//alert("hello");
+
 		i = i +1;
 	}
 	
@@ -329,7 +330,7 @@ function upDateThumb()
      var y = document.getElementsByClassName("thumb");
 
      //Make the first Image selected
-     if(currentListOfLayers.length === 0)
+     if(currentListOfLayers.length == 0)
      {
        var x = document.getElementsByClassName("unselected");
        x[0].className = "selected";
