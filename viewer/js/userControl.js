@@ -40,11 +40,10 @@
 
 
 
- chad_cite_Layers.setPage(79);
- getlayers();
+chad_cite_Layers.setPage(79);
+getlayers();
 
 setThumb()
-
 
 function prev()
 { 
@@ -115,10 +114,11 @@ function bigger()
 //smaller sets the "imageSize" then has the images redrawn
 function smaller()
 {
-	if(imageHeight === -1)
-		imageHeight = totalListOfLayers[0].height;
-	if(imageWidth ===-1)
-		imageWidth = totalListOfLayers[0].width;
+
+	   if(imageHeight === -1)
+		   imageHeight = totalListOfLayers[0].height;
+	   if(imageWidth ===-1)
+		   imageWidth = totalListOfLayers[0].width;
 
 
 	var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
@@ -166,7 +166,13 @@ function getlayers()
 		var hold = i;
 		//chad_cite_Layers.setLayer(layerNames[counter]);
 		chad_cite_Layers.setLayer(name);
-		temp.onload = function() {document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src};//{document.getElementsByClassName("thumb")[hold].children[hold].src = totalListOfLayers[hold].src };
+		temp.onload = function() {
+		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src;
+		                            if(imageHeight === -1)
+		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
+	   								if(imageWidth ===-1)
+		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;     
+		                          };
 	    temp.src = chad_cite_Layers.update();
 	  //temp.height ="100%";// imageSize;
 	  //temp.width = imageSize;
@@ -320,14 +326,17 @@ function upDateThumb()
 		//alert("setThumb")
 	}
 
+     var y = document.getElementsByClassName("thumb");
+
      //Make the first Image selected
-    var x = document.getElementsByClassName("unselected");
-    x[0].className = "selected";
-    var y = document.getElementsByClassName("thumb");
-    y[0].setAttribute("checked","false");
-    currentListOfLayers.push(totalListOfLayers[0]);
-    displayLayers();
-    
+     if(currentListOfLayers.length === 0)
+     {
+       var x = document.getElementsByClassName("unselected");
+       x[0].className = "selected";
+       y[0].setAttribute("checked","false");
+       currentListOfLayers.push(totalListOfLayers[0]);
+       displayLayers();
+    }
     var listOfDest=[];
     listOfDest[0] ="one";  listOfDest[1]="two"  ; listOfDest[2] ="three";
     listOfDest[3] ="four"; listOfDest[4]="five"; listOfDest[5] ="six";
@@ -338,7 +347,7 @@ function upDateThumb()
 	   y[i].setAttribute("description","<p>" + listOfDest[i]);
     }
     
-    window.scroll = whenScrolled;
+   // window.scroll = whenScrolled;
     
 
 }
