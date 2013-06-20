@@ -303,9 +303,7 @@ function whenThumbMouseOver(that)
 }
 function clearText()
 {
-document.getElementById("description").innerHTML =" ";
-console.log("hello");
-
+ document.getElementById("description").innerHTML =" <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>";
 }
 
 
@@ -334,13 +332,33 @@ function upDateThumb()
     listOfDest[0] ="one";  listOfDest[1]="two"  ; listOfDest[2] ="three";
     listOfDest[3] ="four"; listOfDest[4]="five"; listOfDest[5] ="six";
     listOfDest[6] ="seven";  listOfDest[7]="eight";
-    console.log("stress");
     //Adding the descriptions
     for(var i = 0; i<y.length;i++)
     {
 	   y[i].setAttribute("description","<p>" + listOfDest[i]);
-	   console.log("here");
     }
+    
+    window.scroll = whenScrolled;
+    
 
 }
+
+function whenScrolled()
+{
+ alert("scroll event detected! " + window.pageXOffset + " " + window.pageYOffset);
+ // note: you can use window.innerWidth and window.innerHeight to access the width and height of the viewing area
+}
+
+function whenMouseWheel(event)
+{
+//alert(event.wheelDeltaY) ;
+        if( event.wheelDeltaY > 0){
+			bigger();       
+	     }
+        else if(event.wheelDeltaY <0 ){
+             smaller();
+    	}
+    	 
+}
+
 upDateThumb()
