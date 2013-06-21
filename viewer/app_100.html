@@ -13,10 +13,14 @@
    <!-- This is the js file specifically for this Page -->
 <script type="text/javascript" language="Javascript" SRC="./js/userControl.js"></script>
 
+    <!---This is for the jquery code.  The first is the jquery library, the second file controls the hide-->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
+
+
+
 </head>
 
 <body onload="upDateThumb()">
-
         	<div id="wrapper_MAIN"> 
             	<iframe  frameBorder="0" align="justify" id="myFrame" scrolling="no" src="./clean.html" onload="whenFrameLoads()"  onmousewheel="whenMouseWheel(event)" ></iframe>
             </div>
@@ -25,7 +29,7 @@
                 <div id="top_CONTAINER">
                 <div id="top">
                 	<div id="top_LEFT"></div>
-                    <div id="top_CENTER"><p>Diachronic Viewer</p></div>
+                    <div id="top_CENTER"><p>Diachronic Viewer (hover over me) ;</p></div>
                     <div id="top_RIGHT"></div>
                 </div>    
                 </div>
@@ -57,4 +61,5 @@
         
 
 </body>
+<script  src="./js/jqControl.js"></script>
 </html>

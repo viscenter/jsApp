@@ -15,12 +15,20 @@
 
 	var imageSize = 592;//This is bad form
   			     //This value holds the state of the zoom for all images
+  	
+  	
+  	
+  	var maxZoomSize = imageSize ;  
+  	var minZoomSize = imageSize * 10 ;
+  	
+  	
+  	var zoomRatio = 6/5;
   					
 	var scale = 1.0;
     var imageHeight = -1;
     var imageWidth =-1;
     
-    
+
   	
    var layers = {
    "ChadRGB.Chad":0,
@@ -86,25 +94,24 @@ function loadImageInThumb()
 //Bigger sets the "imageSize" then has the images redrawn
 function bigger()
 {
-	if(imageHeight === -1)
-		imageHeight = totalListOfLayers[0].height;
-	if(imageWidth ===-1)
-		imageWidth = totalListOfLayers[0].width;
 
-	
-	var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
-	var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
+    if(imageSize * zoomRatio <  minZoomSize)
+    {
+	   imageSize = imageSize * zoomRatio;
+ 	   var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
+	   var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
    
-    var fWidth  = document.getElementById("myFrame").offsetWidth/2;
-    var fLenght = document.getElementById("myFrame").offsetHeight/2;
+       var fWidth  = document.getElementById("myFrame").offsetWidth/2;
+       var fLenght = document.getElementById("myFrame").offsetHeight/2;
 
 
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 3/2 + fWidth );//(450 - x)/imageWidth * 3/2 + x; 
-    document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  ((y-fLenght) * 3/2 + fLenght);// (600-y)/imageHeight * 3/2 + y;
+	   document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * zoomRatio + fWidth );//(450 - x)/imageWidth * 3/2 + x; 
+       document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  ((y-fLenght) * zoomRatio + fLenght);// (600-y)/imageHeight * 3/2 + y;
 	
-	imageHeight = imageHeight *3.0 / 2.0;
-	imageWidth = imageWidth *3.0 / 2.0;
-	displayLayers();
+	   imageHeight = imageHeight *zoomRatio;
+	   imageWidth = imageWidth *zoomRatio;
+	   displayLayers();
+	}
 }
 
 
@@ -115,27 +122,23 @@ function bigger()
 function smaller()
 {
 
-	   if(imageHeight === -1)
-		   imageHeight = totalListOfLayers[0].height;
-	   if(imageWidth ===-1)
-		   imageWidth = totalListOfLayers[0].width;
+    if(imageSize * 1/zoomRatio > maxZoomSize)
+    {
+       imageSize = imageSize * 1/zoomRatio;
+	   var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
+	   var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
+	   
+       var fWidth  = document.getElementById("myFrame").offsetWidth/2;
+       var fLenght = document.getElementById("myFrame").offsetHeight/2;
 
-
-	var y = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top , 0);
-	var x = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left, 0);
-
-    var fWidth  = document.getElementById("myFrame").offsetWidth/2;
-    var fLenght = document.getElementById("myFrame").offsetHeight/2;
-
+	   document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 1/zoomRatio + fWidth ) ;//(450 - x)/imageWidth * 2/3 + x; 
+       document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  ((y-fLenght) * 1/zoomRatio + fLenght); //(600-y)/imageHeight * 2/3 + y;
 	
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  ((x-fWidth ) * 2/3 + fWidth ) ;//(450 - x)/imageWidth * 2/3 + x; 
-    document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  ((y-fLenght) * 2/3 + fLenght); //(600-y)/imageHeight * 2/3 + y;
-	
-	
-	imageHeight = imageHeight *2.0 / 3.0;
-	imageWidth = imageWidth *2.0 / 3.0;
+	   imageHeight = imageHeight *1/zoomRatio;
+	   imageWidth = imageWidth *1/zoomRatio;
 
-	displayLayers();
+	   displayLayers();
+	}
 }
 
 //getLayers()
@@ -362,13 +365,21 @@ function whenScrolled()
 function whenMouseWheel(event)
 {
 //alert(event.wheelDeltaY) ;
-        if( event.wheelDeltaY > 0){
+        if( event.wheelDeltaY > 60){
 			bigger();       
 	     }
-        else if(event.wheelDeltaY <0 ){
+        if(event.wheelDeltaY <-60 ){
              smaller();
     	}
     	 
 }
 
 upDateThumb()
+
+
+
+
+
+
+
+
