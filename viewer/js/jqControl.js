@@ -8,18 +8,33 @@
 //  });
 //});
  console.log("file is in");
+ var showState = true;
  
   //  $("#header_MAIN").mouseover(function () {
-    $("#header_MAIN").hover(function () {
+  //  $("#header_MAIN").hover(function () {
    // console.log("over");
-          $("#thumbs_CONTAINER").show("fast");
-    });
+   //       $("#thumbs_CONTAINER").show("fast");
+  //  });
     
   
     //$(("#myFrame").contents().find("#imageDiv")).hover(function () {
-    $("#wrapper_MAIN").hover(function () {
+ //   $("#wrapper_MAIN").hover(function () {
   //    console.log("in");
-         $("#thumbs_CONTAINER").hide("fast");
+//         $("#thumbs_CONTAINER").hide("fast");
+  //  });
+
+    $("#collapse").click(function () {
+     if(showState)
+     {
+        $("#thumbs_CONTAINER").hide("fast");
+         showState =false;
+     }
+     else
+     {
+        $("#thumbs_CONTAINER").show("fast");
+         showState = true;
+     }   
+         
     });
 
 
