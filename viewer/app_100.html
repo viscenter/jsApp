@@ -58,9 +58,9 @@
           	</div>
             
             <div id="zoom">
-                    	<div id="zoom_in"><img src="assets/layout/zoom_in.png" width="30" height="30" alt="Zoom In" /></div>
-                        <div id="zoom_out"><img src="assets/layout/zoom_out.png" width="30" height="30" alt="Zoom Out" /></div>
-                    </div>
+            <div id="zoom_in"><img id="zoomInImg" src="assets/layout/zoom_in.png" alt="Zoom In" title="Zoom In" width="28" height="28" class="zoom" onclick ="bigger()" onmouseover="document.getElementById('zoomInImg').style.opacity='.5'" onmouseout="document.getElementById('zoomInImg').style.opacity='1'" /></div>
+                    	<div id="zoom_out"><img id="zoomOutImg" src="assets/layout/zoom_out.png" alt="Zoom Out" title="Zoom Out" width="28" height="28" class="zoom" onclick ="smaller()" onmouseover="document.getElementById('zoomOutImg').style.opacity='.5'" onmouseout="document.getElementById('zoomOutImg').style.opacity='1'"/></div>
+                     </div>
                 
             </div>
                
