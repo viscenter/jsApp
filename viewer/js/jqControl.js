@@ -36,6 +36,16 @@
      }   
          
     });
+    var stateWidth = document.getElementById("myFrame").offsetWidth;
+        $(window).resize(function() 
+        {
+       console.log("you moved tthe window?");
+    
+       diff = (stateWidth - document.getElementById("myFrame").offsetWidth)/2;
+       pos = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left,0);
+       document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = pos - diff;
+       stateWidth = document.getElementById("myFrame").offsetWidth;
+});
 
 
 
