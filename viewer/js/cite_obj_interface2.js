@@ -100,10 +100,11 @@ function GoToPage(pageNum)
 //setUpThumNail creates a "citeUrn" object for the sole goal of providing the front end with 
 //ThumbNails. Most of the setup information is the same as the first object, but the default Image size is much smaller
 //It is handy for navigating the images
+var ThumbNail_cite;
 function setUpThumbNail()
 {
  
-  var ThumbNail_cite = new citeUrn("/amphoreus.hpcc.uh.edu", //set server
+   ThumbNail_cite = new citeUrn("/amphoreus.hpcc.uh.edu", //set server
   "/tomcat/chsimg/Img",                               //set dir
   "cite",                                             // set CITE namespace
   "fufolioimg",                                       //set CITE work ID

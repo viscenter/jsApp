@@ -65,11 +65,6 @@ function prev()
 function next()
 {
 	chad_cite_Layers.nextPage();
-    //for( var i=0; i<totalListOfLayers.length;i++)
-   // {
-    //	totalListOfLayers[i].onload = displayLayers();				
-    //	alert(i + " onload");							
-    //}
     loadImageInThumb();
     getlayers();
 
@@ -82,8 +77,7 @@ function loadImageInThumb()
 	for(var i = 0; i<listOfThumb.length;i++)
 	{
 		listOfThumb[i].children[0].src =  "./assets/page_thumbs/thumb_loader.gif";
-		//listOfThumb[0][i].style.opacity = .3;
-		//alert("setThumb")
+
 	}
 
 }
@@ -170,7 +164,7 @@ function getlayers()
 		//chad_cite_Layers.setLayer(layerNames[counter]);
 		chad_cite_Layers.setLayer(name);
 		temp.onload = function() {
-		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src;
+		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src; 
 		                            if(imageHeight === -1)
 		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
 	   								if(imageWidth ===-1)

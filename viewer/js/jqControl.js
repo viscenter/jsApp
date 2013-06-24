@@ -11,14 +11,14 @@
  
   //  $("#header_MAIN").mouseover(function () {
     $("#header_MAIN").hover(function () {
-    console.log("over");
+   // console.log("over");
           $("#thumbs_CONTAINER").show("fast");
     });
     
   
     //$(("#myFrame").contents().find("#imageDiv")).hover(function () {
     $("#wrapper_MAIN").hover(function () {
-      console.log("in");
+  //    console.log("in");
          $("#thumbs_CONTAINER").hide("fast");
     });
 
