@@ -46,13 +46,16 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #header_MAIN{
 	width:100%;
-	height:300px;
+	height:260px;
 	position: absolute;
 	background-color:;
 	z-index:1;
 	
 }
 
+
+/*TOP CONTAINER
+-------------------------------------------------------------------------------------------------*/
 #top_CONTAINER{
 	width:100%;
 	height:50px;
@@ -160,7 +163,7 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #thumbs_CONTAINER{
 	width:100%;
-	height:150px;
+	height:210px;
 	background-color:#000;
 	opacity:0.85;
 }
@@ -230,6 +233,31 @@ body {
 	color:#CCC;
 }
 
+/*COLLAPSE
+-------------------------------------------------------------------------------------------------*/
+#collapse_CONTAINER{
+	width:100%;
+	height:40px;
+	background-color:;
+	opacity:7.0;
+	/*background-image:url(../assets/layout/gradient.png);
+	background-repeat:repeat-x;*/
+}
+
+#collapse{
+	width:60px;
+	height:30px;
+	margin:0px auto;
+	background-color:;
+	opacity:7.0;
+	padding:0px 0px 0px 0px;
+}
+
+#collapse a:hover{
+	border:none;
+	text-decoration:none;
+}
+
 /*ZOOM
 -------------------------------------------------------------------------------------------------*/
 #zoom_CONTAINER{
@@ -241,12 +269,12 @@ body {
 }
 
 #zoom{
-	width:60px;
-	height:30px;
-	margin:0px auto;
+	width:30px;
+	height:60px;
+	margin:;
 	background-color:;
 	opacity:1.0;
-	padding:5px 0px 0px 0px;
+	padding:20px 0px 0px 20px;
 }
 
 #zoom_out{
