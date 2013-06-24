@@ -246,17 +246,24 @@ body {
 
 #collapse{
 	width:60px;
-	height:30px;
+	height:40px;
 	margin:0px auto;
 	background-color:;
 	opacity:7.0;
 	padding:0px 0px 0px 0px;
 }
 
-#collapse a:hover{
-	border:none;
-	text-decoration:none;
+img.collapse{
+	width:60px;
+	height:40px;
+	background:url(../assets/layout/collapse_sprite.png) 0 0;
 }
+
+#collapse a:hover{background:url(../assets/layout/collapse_sprite.png) -60px -0px;}
+#prev a:hover{background:url(../assets/layout/collapse_sprite.png) -47px -45px;}
+#next a:hover{background:url(../assets/layout/collapse_sprite.png) -91px -45px;}
+
+
 
 /*ZOOM
 -------------------------------------------------------------------------------------------------*/
@@ -274,7 +281,7 @@ body {
 	margin:;
 	background-color:;
 	opacity:1.0;
-	padding:20px 0px 0px 20px;
+	padding:0px 0px 0px 20px;
 }
 
 #zoom_out{
