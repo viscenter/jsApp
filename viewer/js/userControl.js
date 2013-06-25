@@ -135,6 +135,42 @@ function smaller()
 	}
 }
 
+
+
+function panUp()
+{
+     var t = document.getElementById("myFrame").offsetHeight;
+     pan(0,-t/10);
+}
+function panDown()
+{
+     var t = document.getElementById("myFrame").offsetHeight;
+     pan(0,t/10);
+}
+
+
+
+function panRight()
+{
+     var t = document.getElementById("myFrame").offsetWidth;
+     pan(t/10,0);
+}
+
+function panLeft()
+{
+     var t = document.getElementById("myFrame").offsetWidth;
+     pan(-t/10,0);
+}
+
+
+
+function pan(deltaX,deltaY)
+{
+       document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =  parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left,0) + deltaX;
+       document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top  =  parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top,0) + deltaY;
+
+}
+
 //getLayers()
 //-------------
 //GetLayers uses the cite object called chad_cite_Layers, to 
