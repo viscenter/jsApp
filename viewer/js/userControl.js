@@ -404,7 +404,19 @@ function whenMouseWheel(event)
     	 
 }
 
-upDateThumb()
+
+
+function whenKeyPressed(data)
+{
+ //console.log(data);
+ //console.log(data.keyCode);
+ if(data.which == 37)      panLeft();
+ else if(data.which == 38) panUp();
+ else if(data.which == 39) panRight();
+ else if(data.which == 40 ) panDown();
+}
+
+
 
 
 
