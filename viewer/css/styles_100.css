@@ -291,18 +291,28 @@ body {
 	top:0;
 }
 
-#collapse li, #collapse a{
-	height:40px;
-	display:block;
+#collapse a{
+	display: block;
+	background:url(../assets/layout/collapse_up.png);
+	background-repeat:no-repeat;
+	width: 60px;
+	height: 40px;
 }
 
+#collapse a:hover {
+       background-position: -60px 0px;
+}
+/*
 img.collapse{
 	width:60px;
 	height:40px;
 	background:url(../assets/layout/collapse_sprite.png) 0 0;
 }
 
-#collapse a:hover{background:url(../assets/layout/collapse_sprite.png) -60px -0px;}
+#home{left:0px;width:46px;}
+#home{background:url(../assets/layout/collapse_sprite.png) 0 0;}
+
+#collapse a:hover{background:url(../assets/layout/collapse_sprite.png) -60px 0px;}
 #prev a:hover{background:url(../assets/layout/collapse_sprite.png) -47px -45px;}
 #next a:hover{background:url(../assets/layout/collapse_sprite.png) -91px -45px;}
 
