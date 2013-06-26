@@ -395,10 +395,10 @@ function whenScrolled()
 function whenMouseWheel(event)
 {
 //alert(event.wheelDeltaY) ;
-        if( event.wheelDeltaY > 60){
+        if( event.wheelDeltaY > 30){
 			bigger();       
 	     }
-        if(event.wheelDeltaY <-60 ){
+        if(event.wheelDeltaY <-30 ){
              smaller();
     	}
     	 
@@ -410,10 +410,10 @@ function whenKeyPressed(data)
 {
  //console.log(data);
  //console.log(data.keyCode);
- if(data.which == 37)      panLeft();
- else if(data.which == 38) panUp();
- else if(data.which == 39) panRight();
- else if(data.which == 40 ) panDown();
+ if(data.which == 37)      panRight();
+ else if(data.which == 38) panDown(); 
+ else if(data.which == 39)  panLeft();
+ else if(data.which == 40 ) panUp();
 }
 
 

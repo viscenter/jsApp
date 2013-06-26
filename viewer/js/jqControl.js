@@ -26,12 +26,14 @@
     $("#collapse").click(function () {
      if(showState)
      {
-        $("#thumbs_CONTAINER").hide("fast");
+       // $("#thumbs_CONTAINER").hide("fast");
+          $("#thumbs_CONTAINER").slideUp();
          showState =false;
      }
      else
      {
-        $("#thumbs_CONTAINER").show("fast");
+        //$("#thumbs_CONTAINER").show("fast");
+        $("#thumbs_CONTAINER").slideDown();
          showState = true;
      }   
          
