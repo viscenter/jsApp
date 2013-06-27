@@ -28,6 +28,8 @@
      {
        // $("#thumbs_CONTAINER").hide("fast");
           $("#thumbs_CONTAINER").slideUp();
+          $("#thumbs_CONTAINER").css({"height":"0"});
+          $("#header_MAIN").css({"height":"50"});
          showState =false;
      }
      else
@@ -35,6 +37,9 @@
         //$("#thumbs_CONTAINER").show("fast");
         $("#thumbs_CONTAINER").slideDown();
          showState = true;
+        $("#thumbs_CONTAINER").css({"height":"210px"});
+        $("#header_MAIN").css({"height":"260px"});
+
      }   
          
     });
