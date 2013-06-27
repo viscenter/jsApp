@@ -18,7 +18,7 @@
   	
   	
   	
-  	var maxZoomSize = imageSize ;  
+  	var maxZoomSize = imageSize /5;  
   	var minZoomSize = imageSize * 10 ;
   	
   	
