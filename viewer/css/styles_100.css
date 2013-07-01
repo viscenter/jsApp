@@ -293,7 +293,7 @@ body {
 
 #collapse a{
 	display: block;
-	background:url(../assets/layout/collapse_up.png);
+	background:url(../assets/layout/collapse.png);
 	background-repeat:no-repeat;
 	width: 60px;
 	height: 40px;
@@ -301,6 +301,14 @@ body {
 
 #collapse a:hover {
        background-position: -60px 0px;
+}
+
+#collapse a:visited {
+       display: block;
+	background:url(../assets/layout/expand.png);
+	background-repeat:no-repeat;
+	width: 60px;
+	height: 40px;
 }
 /*
 img.collapse{
