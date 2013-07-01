@@ -26,19 +26,26 @@
     $("#collapse").click(function () {
      if(showState)
      {
-       // $("#thumbs_CONTAINER").hide("fast");
-          $("#thumbs_CONTAINER").slideUp();
+          $("#thumbs_CONTAINER").slideUp(1);
+         showState =false;
+       //   $("#thumbs_CONTAINER").css({"z-index":1});
           $("#thumbs_CONTAINER").css({"height":"0"});
           $("#header_MAIN").css({"height":"50"});
-         showState =false;
+   
+
      }
      else
      {
-        //$("#thumbs_CONTAINER").show("fast");
-        $("#thumbs_CONTAINER").slideDown();
+      
+        $("#thumbs_CONTAINER").slideDown(1);
          showState = true;
+       //  $("#thumbs_CONTAINER").css({"z-index":-1});
+
         $("#thumbs_CONTAINER").css({"height":"210px"});
         $("#header_MAIN").css({"height":"260px"});
+ 
+
+        
 
      }   
          

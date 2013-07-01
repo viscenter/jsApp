@@ -395,10 +395,10 @@ function whenScrolled()
 function whenMouseWheel(event)
 {
 //alert(event.wheelDeltaY) ;
-        if( event.wheelDeltaY > 30){
+        if( event.wheelDeltaY > 10){
 			bigger();       
 	     }
-        if(event.wheelDeltaY <-30 ){
+        if(event.wheelDeltaY <-10 ){
              smaller();
     	}
     	 
