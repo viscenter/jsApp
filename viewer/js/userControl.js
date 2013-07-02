@@ -33,12 +33,12 @@
    var layers = {
    "ChadRGB.Chad":0,
    "ChadPOC.Chad-Multispectral1-":1,
-   "ChadPOC.Chad-Background-":2,
-   "ChadPOC.Chad-Latin-":3,
-   "ChadPOC.Chad-English-":4,
-   "ChadPOC.Chad-2003-":5,
-   "ChadPOC.Chad-1962-":6,
-   "ChadPOC.Chad-1929-":7
+ //  "ChadPOC.Chad-Background-":2,
+ //  "ChadPOC.Chad-Latin-":3,
+ //  "ChadPOC.Chad-English-":4,
+   "ChadPOC.Chad-2003-":3,
+   "ChadPOC.Chad-1962-":4,
+   "ChadPOC.Chad-1929-":5
    }
    
 
@@ -179,7 +179,7 @@ function pan(deltaX,deltaY)
 function getlayers()
 {
 	var counter = 0;
-	while(counter < 8)
+	while(counter < 5)
 	{
 		if(totalListOfLayers[counter] != undefined)
 		{
@@ -381,9 +381,9 @@ function upDateThumb()
     listOfDest[2] ="The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3."; 
     listOfDest[3]="The set of images taken of the Chad Gospels in 1962. This page contains Matthew 17:22-Matthew 18:3.  "; 
     listOfDest[4] ="The set of images taken of the Chad Gospels in 1929. This page contains Matthew 17:22-Matthew 18:3.";
-    listOfDest[5] ="n/a";  
-    listOfDest[6]="n/a";
-    listOfDest[7]="n/a";
+    //listOfDest[5] ="n/a";  
+    //listOfDest[6]="n/a";
+    //listOfDest[7]="n/a";
 
     //Adding the descriptions
     for(var i = 0; i<y.length;i++)

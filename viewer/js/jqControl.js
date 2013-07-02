@@ -1,29 +1,9 @@
 
 
 
-//$("#myFrame").click(function () {
-  //$("span:last-child").hide("fast", function () {
-    // use callee so don't have to name the function
-    //$(this).prev().hide("fast", arguments.callee);
-//    console.log("in jq");
-//    $("#thumbs_CONTAINER").hide("slow");
-//  });
-//});
- console.log("file is in");
  var showState = true;
  
-  //  $("#header_MAIN").mouseover(function () {
-  //  $("#header_MAIN").hover(function () {
-   // console.log("over");
-   //       $("#thumbs_CONTAINER").show("fast");
-  //  });
-    
-  
-    //$(("#myFrame").contents().find("#imageDiv")).hover(function () {
- //   $("#wrapper_MAIN").hover(function () {
-  //    console.log("in");
-//         $("#thumbs_CONTAINER").hide("fast");
-  //  });
+
 
     $("#collapse").click(function () {
      if(showState)
@@ -64,17 +44,8 @@
 });
 
 $("#wrapper_MAIN").mouseout(function(){
-    console.log("ello gov");
-   //$('#myFrame').contents().find('#draggable').removeClass("ui-draggable ui-draggable-dragging");
-    //$('#myFrame').contents().find('#draggable').draggable( "disable" );
-    //$('#myFrame').trigger("mouseup") ;//$(document).trigger("mouseup")
-      //$("#myFrame").trigger("mouseup");
- // $('#myFrame').contents().find('#draggable').draggable('option', 'revert', true);
-    
-    //$('#myFrame').contents().find('#draggable').draggable( "option", "revert", true );
-    
-      $('#myFrame')[0].contentWindow.drop();
-    });
+    $('#myFrame')[0].contentWindow.drop();
+});
 
 
 
