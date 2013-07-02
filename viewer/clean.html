@@ -43,19 +43,13 @@ Later we will give very special abilities to the draggable style
 	$("#draggable").draggable({	});
 	$('buttons').css('z-index', '1000');
 
-
-
-
-
-
-//$("body").mouseenter(function(){
-//    $( ".selector" ).draggable( "enable" );
-//    console.log("hello");
-//    });
-    
-//$("body").mouseleave(function(){
-  // $( ".selector" ).draggable( "disable" );
-    //});
+     
+$('body').mouseover(function(){
+    //console.log("Here");
+   // alert("Hail Mary");
+    var e = jQuery.Event( "mouseup" );
+    jQuery( "body" ).trigger( e );
+    });
 
 </script>
 

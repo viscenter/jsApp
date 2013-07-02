@@ -334,6 +334,10 @@ function whenFrameLoads()
 
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageSize/2;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =300; //Size of the header bar above the image
+	
+
+
+
 }
 
 
@@ -343,7 +347,7 @@ function whenThumbMouseOver(that)
 }
 function clearText()
 {
- document.getElementById("description").innerHTML =" <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>";
+ document.getElementById("description").innerHTML =" <p><strong>Description:</strong> Above is the data set of the Chad Gospels that were imaged with permission from the Lichfield Cathedral in England. Select the layers you wish to view—either on its own or in comparison with another—by clicking on the thumbnail.</p></div>";
 }
 
 
@@ -372,9 +376,15 @@ function upDateThumb()
        displayLayers();
     }
     var listOfDest=[];
-    listOfDest[0] ="one";  listOfDest[1]="two"  ; listOfDest[2] ="three";
-    listOfDest[3] ="four"; listOfDest[4]="five"; listOfDest[5] ="six";
-    listOfDest[6] ="seven";  listOfDest[7]="eight";
+    listOfDest[0]="The high-resolution composite of images taken in 2010 at the Lichfield Cathedral. This page contains Matthew 17:22-Matthew 18:3"
+    listOfDest[1]="The composite of images taken in different light spectrums that have been processed by performing mathematical equations to the individual pixels to render a new image. This page contains Matthew 17:22-Matthew 18:3.    "  ; 
+    listOfDest[2] ="The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3."; 
+    listOfDest[3]="The set of images taken of the Chad Gospels in 1962. This page contains Matthew 17:22-Matthew 18:3.  "; 
+    listOfDest[4] ="The set of images taken of the Chad Gospels in 1929. This page contains Matthew 17:22-Matthew 18:3.";
+    listOfDest[5] ="n/a";  
+    listOfDest[6]="n/a";
+    listOfDest[7]="n/a";
+
     //Adding the descriptions
     for(var i = 0; i<y.length;i++)
     {
