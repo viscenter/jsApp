@@ -72,6 +72,8 @@ $("#wrapper_MAIN").mouseout(function(){
  // $('#myFrame').contents().find('#draggable').draggable('option', 'revert', true);
     
     //$('#myFrame').contents().find('#draggable').draggable( "option", "revert", true );
+    
+      $('#myFrame')[0].contentWindow.drop();
     });
 
 

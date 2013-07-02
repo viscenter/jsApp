@@ -9,6 +9,20 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
+
+   <style type="text/css">
+    	html, body {
+    		height: 100%;
+    		margin: 0;
+    	}
+
+    	#wrapper {
+    		min-height: 100%; 
+    	}
+    </style>
+
+
+
 </head>
 
 <!--
@@ -44,12 +58,18 @@ Later we will give very special abilities to the draggable style
 	$('buttons').css('z-index', '1000');
 
      
-$('body').mouseover(function(){
+$('body').mouseout(function(){
     //console.log("Here");
-   // alert("Hail Mary");
+ //   alert("Hail Mary");
     var e = jQuery.Event( "mouseup" );
     jQuery( "body" ).trigger( e );
     });
+    
+function drop()
+{
+   var e = jQuery.Event( "mouseup" );
+    jQuery( "body" ).trigger( e );
+}
 
 </script>
 
