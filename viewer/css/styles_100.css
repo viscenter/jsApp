@@ -163,14 +163,14 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #thumbs_CONTAINER{
 	width:100%;
-	height:210px;
+	height:215px;
 	background-color:#000;
 	opacity:0.85;
 }
 
 #thumbs{
 	width:1000px;
-	height:150px;
+	height:155px;
 	margin:0px auto;
 }
 
@@ -272,6 +272,7 @@ body {
 	background-color:;
 	opacity:7.0;
 }
+
 #collapse{
 	width:60px;
 	height:40px;
@@ -281,8 +282,7 @@ body {
 	padding:0px 0px 0px 0px;
 	position:relative;
 }
-
-
+/*
 #collapse li{
 	margin:0;
 	padding:0;
@@ -310,21 +310,62 @@ body {
 	width: 60px;
 	height: 40px;
 }
-/*
+
+/*COLLAPSE-EXPAND SPRITE
+-------------------------------------------------------------------------------------------------*/
 img.collapse{
 	width:60px;
 	height:40px;
-	background:url(../assets/layout/collapse_sprite.png) 0 0;
+	background:url(../assets/layout/collapse.png) 0px 0px;
 }
 
-#home{left:0px;width:46px;}
-#home{background:url(../assets/layout/collapse_sprite.png) 0 0;}
+/*#collapse{
+	left:0px;
+	width:60px;
+	}
+	*/
+#collapse{
+	background:url(../assets/layout/collapse.png) 0px 0px;
+	}
 
-#collapse a:hover{background:url(../assets/layout/collapse_sprite.png) -60px 0px;}
-#prev a:hover{background:url(../assets/layout/collapse_sprite.png) -47px -45px;}
-#next a:hover{background:url(../assets/layout/collapse_sprite.png) -91px -45px;}
+#collapse a:hover{background:url(../assets/layout/collapse.png) -60px 0px;}
+#prev a:hover{background:url(../assets/layout/collapse.png) -47px -45px;}
+#next a:hover{background:url(../assets/layout/collapse.png) -91px -45px;}
 
 
+/*EXPAND
+-------------------------------------------------------------------------------------------------*/
+#expand{
+	width:60px;
+	height:40px;
+	margin:0px auto;
+	background-color:;
+	opacity:7.0;
+	padding:0px 0px 0px 0px;
+	position:relative;
+}
+
+/*
+#expand li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	position:absolute;
+	top:0;
+}
+
+#expand a{
+	display: block;
+	background:url(../assets/layout/collapse.png);
+	background-repeat:no-repeat;
+	width: 60px;
+	height: 40px;
+}
+
+#expand a:hover {
+       background-position: -60px 0px;
+}
+*/
 
 /*ZOOM
 -------------------------------------------------------------------------------------------------*/

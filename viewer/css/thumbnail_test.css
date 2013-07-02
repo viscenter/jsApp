@@ -39,6 +39,7 @@ body {
 	height:150px;
 	margin:0px auto;
 	background-color:#999;
+	text-align:center;
 }
 
 #thumbs{
@@ -64,6 +65,11 @@ body {
 	margin:15px auto;
 	border:#FFF solid 5px;
 	background-color:#FFF;
+}
+
+.centerwrapper{
+	margin:auto;
+	width:625;
 }
 
 .thumb{
