@@ -47,7 +47,7 @@ $("#wrapper_MAIN").mouseout(function(){
     $('#myFrame')[0].contentWindow.drop();
 });
 
-
+$('#wrapper_MAIN').css('cursor', 'pointer');
 
 
 

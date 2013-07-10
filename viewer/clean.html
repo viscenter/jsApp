@@ -65,11 +65,19 @@ $('body').mouseout(function(){
     jQuery( "body" ).trigger( e );
     });
     
+
+//If the mouse moves out of the div this fucntion will be called
 function drop()
 {
    var e = jQuery.Event( "mouseup" );
     jQuery( "body" ).trigger( e );
 }
+
+
+
+//This make the curser change into a hand when over the iamge.
+$('#buttonsAndImageDiv').css('cursor', 'pointer'); 
+
 
 </script>
 
