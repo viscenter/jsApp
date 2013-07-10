@@ -10,7 +10,7 @@ sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var {
     /*vertical-align: baseline;*/
 }
 
-body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
+body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, a. a:hover {
   margin: 0;
   padding: 0;
 }
@@ -23,6 +23,7 @@ html {
 body {
   height: 100%;
   background-color:#000;
+  background-image:url(../assets/layout/backgrounds/black_grid.jpg);
   /*background: #fff;
   color: #444;
   line-height: 1.4;*/
@@ -34,7 +35,7 @@ body {
 	width:100%;
 	height:100%;
 	position: absolute;
-	background-color:#000;
+	background-color:;
 	/*background-image:url(../assets/layout/backgrounds/louver_01.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
@@ -46,9 +47,8 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #header_MAIN{
 	width:100%;
-	height:260px;
+	height:266px;
 	position: absolute;
-	background-color:;
 	z-index:1;
 	
 }
@@ -61,7 +61,7 @@ body {
 	height:50px;
 	background-color:#000;
 	border-bottom:#666 solid 1px;
-	opacity:1.0;
+	opacity:;
 }
 
 #top{
@@ -69,7 +69,7 @@ body {
 	height:50px;
 	margin:0px auto;
 	display:block;
-	opacity:1.0;
+	opacity:;
 }
 
 /*TOP LEFT
@@ -164,8 +164,10 @@ body {
 #thumbs_CONTAINER{
 	width:100%;
 	height:215px;
-	background-color:#000;
-	opacity:0.85;
+	background-image:url(../assets/layout/top_BG.png);
+	background-repeat:repeat-x;
+	/*background-color:#000;
+	opacity:0.85;*/
 }
 
 #thumbs{
@@ -215,14 +217,12 @@ body {
 #description_CONTAINER{
 	width:100%;
 	height:60px;
-	background-color:#000;
 }
 
 #description{
 	width:1000px;
 	height:60px;
 	margin:0px auto;
-	opacity:1.0;
 }
 
 #description p{
@@ -268,55 +268,56 @@ body {
 -------------------------------------------------------------------------------------------------*/
 #collapse_CONTAINER{
 	width:100%;
-	height:40px;
-	background-color:;
+	height:20px;
 	opacity:7.0;
-}
-
-#collapse{
-	width:60px;
-	height:40px;
-	margin:0px auto;
-	background-color:;
-	opacity:7.0;
-	padding:0px 0px 0px 0px;
-	position:relative;
 }
 /*
-#collapse li{
-	margin:0;
-	padding:0;
-	list-style:none;
-	position:absolute;
-	top:0;
+#collapse{
+	width:60px;
+	height:20px;
+	display:block;
+	margin:0px auto;
+	opacity:7.0;
+	background-image: url(../assets/layout/collapse.png);
+	background-position:0px 0px;
 }
 
-#collapse a{
-	display: block;
-	background:url(../assets/layout/collapse.png);
-	background-repeat:no-repeat;
-	width: 60px;
-	height: 40px;
+#collapse a:hover{
+	background-image: url(../assets/layout/collapse.png);
+	background-position:-60px 10px;
+	}
+
+/*COLLAPSE SPRITE
+-------------------------------------------------------------------------------------------------*/	
+#collapse{
+	width:60px;
+	margin: 0 auto;
+	opacity:7.0;
 }
 
-#collapse a:hover {
-       background-position: -60px 0px;
+#collapse p a.press-it-btn{
+	display:block;
+	width:60px;
+	height:20px;
+	background-image:url(../assets/layout/collapse.png);
+	background-position:top;
+	text-indent:-9999px;
 }
 
-#collapse a:visited {
-       display: block;
-	background:url(../assets/layout/expand.png);
-	background-repeat:no-repeat;
-	width: 60px;
-	height: 40px;
+#collapse p a.press-it-btn:hover{
+	background-position:bottom;
 }
+
+
 
 /*COLLAPSE-EXPAND SPRITE
 -------------------------------------------------------------------------------------------------*/
 img.collapse{
+	display:block;
 	width:60px;
-	height:40px;
-	background:url(../assets/layout/collapse.png) 0px 0px;
+	height:20px;
+	background-image:url(../assets/layout/collapse.png);
+	background-position:top;
 }
 
 /*#collapse{
@@ -324,12 +325,8 @@ img.collapse{
 	width:60px;
 	}
 	*/
-#collapse{
-	background:url(../assets/layout/collapse.png) 0px 0px;
-	}
 
-#collapse a:hover{background:url(../assets/layout/collapse.png) -60px 0px;}
-#prev a:hover{background:url(../assets/layout/collapse.png) -47px -45px;}
+/*#prev a:hover{background:url(../assets/layout/collapse.png) -47px -45px;}
 #next a:hover{background:url(../assets/layout/collapse.png) -91px -45px;}
 
 

@@ -6,10 +6,12 @@
 <link href="css/styles_100.css" rel="stylesheet" type="text/css" />
 
 <style>
-.centerwrapper{
-	margin:auto;
+
+.centerwrapper{		/*This is the fixed width for the thumbnails - Will increase and descrease in incrments of 125px with the number of thumbnails*/
+	margin:auto;	
 	width:625px;
 }
+
 </style>
 
   <!--Including the CITE object file and the helper file.
@@ -66,8 +68,10 @@
                 	</div>
             	</div>
               <div id="collapse_CONTAINER">
-               <div id="collapse" class="collapse_up"><a href="#"><img class="collapse" src="assets/layout/img_trans.png" /></a></div>
-          	</div>
+              <div id="collapse">
+               <p><a href="#" class="press-it-btn">Press it</a></p>
+               </div>
+          	  </div>
             
             <div id="zoom">
             <div id="zoom_in"><img id="zoomInImg" src="assets/layout/zoom_in.png" alt="Zoom In" title="Zoom In" width="28" height="28" class="zoom" onclick ="bigger()" onmouseover="document.getElementById('zoomInImg').style.opacity='.5'" onmouseout="document.getElementById('zoomInImg').style.opacity='1'" /></div>
