@@ -24,36 +24,41 @@
        //  $("#thumbs_CONTAINER").css({"z-index":-1});
 
         $("#thumbs_CONTAINER").css({"height":"210px"});
-        $("#header_MAIN").css({"height":"260px"});
- 
-
-        
+        $("#header_MAIN").css({"height":"260px"}); 
 
      }   
          
     });
-    var stateWidth = document.getElementById("myFrame").offsetWidth;
-        $(window).resize(function() 
-        {
-     //  console.log("you moved tthe window?");
     
-       diff = (stateWidth - document.getElementById("myFrame").offsetWidth)/2;
-       pos = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left,0);
-       document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = pos - diff;
-       stateWidth = document.getElementById("myFrame").offsetWidth;
-});
+    
+//the function below sets the image to the center of the iframe when the window is resized
+   
+    var stateWidth = document.getElementById("myFrame").offsetWidth;     
+        $(window).resize(function() 
+        {    
+          diff = (stateWidth - document.getElementById("myFrame").offsetWidth)/2;
+          pos = parseInt(document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left,0);
+          document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = pos - diff;
+          stateWidth = document.getElementById("myFrame").offsetWidth;
+        });
 
+
+//this functioin "drops" the image if the mouse leave the image.
+//It calles a function written the clean.html file
 $("#wrapper_MAIN").mouseout(function(){
     $('#myFrame')[0].contentWindow.drop();
 });
 
-$('#wrapper_MAIN').css('cursor', 'pointer');
 
 
+//The following code places a tooltip on the screen,
+//Then after serveral seconds removes it
+    $( document ).tooltip();
+    
+      $("#myFrame").mouseenter();
+      window.setTimeout(removeTip, 10000);
+      
+      function removeTip(){
+        $(document).tooltip('disable');
+      }
 
-
-
-
-//$("#myFrame").click(function () {
-//  $("#thumbs_CONTAINER").show(2000);
-//});

@@ -28,15 +28,19 @@
 <script type="text/javascript" language="Javascript" SRC="./js/userControl.js"></script>
 
     <!---This is for the jquery code.  The first is the jquery library, the second file controls the hide-->
+    
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="./js/query.simulate.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
 </head>
 
 <body onkeydown="whenKeyPressed(event)" onload="upDateThumb()">
-        	<div id="wrapper_MAIN"> 
+        	<div id="wrapper_MAIN">
+		<a title="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat">
             	<iframe  frameBorder="0" align="justify" id="myFrame" scrolling="no" src="./clean.html" onload="whenFrameLoads()"  onmousewheel="whenMouseWheel(event)" ></iframe>
+		</a>
             </div>
             	
             <div id="header_MAIN">
