@@ -13,6 +13,7 @@
        //   $("#thumbs_CONTAINER").css({"z-index":1});
           $("#thumbs_CONTAINER").css({"height":"0"});
           $("#header_MAIN").css({"height":"50"});
+          $("#collapse").children().children().removeClass('collapse-btn').addClass('expand-btn');   
    
 
      }
@@ -26,6 +27,8 @@
         $("#thumbs_CONTAINER").css({"height":"210px"});
         $("#header_MAIN").css({"height":"260px"}); 
 
+          $("#collapse").children().children().removeClass('expand-btn').addClass('collapse-btn');   
+        
      }   
          
     });
