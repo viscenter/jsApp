@@ -335,7 +335,7 @@ function whenFrameLoads()
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageSize/2;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =300; //Size of the header bar above the image
 	
-
+        clearText();
 
 
 }
