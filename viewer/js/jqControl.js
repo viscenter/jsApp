@@ -1,6 +1,6 @@
 
 
-
+var COOKIE_TEXT = "infoForest=true"
  var showState = true;
  
 
@@ -50,15 +50,30 @@ $("#wrapper_MAIN").mouseout(function(){
 });
 
 
+var i,listOfCookies=document.cookie.split(";");
+var beenHereBefore = false;
+for(i in listOfCookies)
+{
+     console.log(listOfCookies[i]);
+     if(listOfCookies[i] == COOKIE_TEXT){
+          beenHereBefore = true;
+         console.log("setting here to true")
+     }
+}
 
 //The following code places a tooltip on the screen,
 //Then after serveral seconds removes it
+console.log(beenHereBefore);
+if(beenHereBefore === false)
+{
     $( "#thumbs_CONTAINER" ).tooltip();
     
       $("#thumbs_CONTAINER").mouseenter();
       window.setTimeout(removeTip, 10000);
       
-      function removeTip(){
-        $("#thumbs_CONTAINER").tooltip('disable');
-      }
 
+     // document.cookie = COOKIE_TEXT;
+}
+function removeTip(){
+     $("#thumbs_CONTAINER").tooltip('disable');
+}
