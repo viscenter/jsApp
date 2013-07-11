@@ -53,12 +53,12 @@ $("#wrapper_MAIN").mouseout(function(){
 
 //The following code places a tooltip on the screen,
 //Then after serveral seconds removes it
-    $( document ).tooltip();
+    $( "#thumbs_CONTAINER" ).tooltip();
     
-      $("#myFrame").mouseenter();
+      $("#thumbs_CONTAINER").mouseenter();
       window.setTimeout(removeTip, 10000);
       
       function removeTip(){
-        $(document).tooltip('disable');
+        $("#thumbs_CONTAINER").tooltip('disable');
       }
 
