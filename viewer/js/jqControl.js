@@ -1,6 +1,6 @@
 
 
-var COOKIE_TEXT = "infoForest=true"
+ var COOKIE_TEXT = "infoForest=true"
  var showState = true;
  
 
@@ -72,7 +72,7 @@ if(beenHereBefore === false)
       window.setTimeout(removeTip, 10000);
       
 
-     // document.cookie = COOKIE_TEXT;
+     document.cookie = COOKIE_TEXT;
 }
 function removeTip(){
      $("#thumbs_CONTAINER").tooltip('disable');
