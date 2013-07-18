@@ -63,7 +63,7 @@ var localCopyCITE;
 function setUpObj_Layers_local()
 {
   var txt=document.getElementById("buildD");
-  localCopyCITE = new citeUrn("./Image/", //set server
+  localCopyCITE = new citeUrn("./bigImage/", //set server
   "",                               //set dir
   "",                                             // set CITE namespace
   "",                                       //set CITE work ID

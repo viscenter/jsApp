@@ -318,7 +318,7 @@ function displayLayers()
 		
 		currentListOfLayers[counter].width  =imageWidth;
 		currentListOfLayers[counter].height  = imageHeight;
-		currentListOfLayers[counter].style.opacity = 1.0/currentListOfLayers.length;
+		currentListOfLayers[counter].style.opacity = 1.0/(counter+1) ;//currentListOfLayers.length;
 		//(window.frames['myFrame'].document.getElementById("imageDiv")).appendChild(currentListOfLayers[counter]);
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").appendChild(currentListOfLayers[counter]);
 		counter = counter + 1;
