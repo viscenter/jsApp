@@ -56,9 +56,9 @@
    }
 */
   var layers={
-	"Chad-Intc-141":0,
-	"Chad-Linf-141":1,
-	"Chad-RGB-141":2,
+	"Chad-RGB-141":0,
+	"Chad-Intc-141":1,
+	"Chad-Linf-141":2,
 	"Chad-Skew-141":3,
 	"Chad-StdDev-141":4
   }
