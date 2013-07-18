@@ -57,7 +57,7 @@ var i,listOfCookies=document.cookie.split(";");
 var beenHereBefore = false;
 for(i in listOfCookies)
 {
-     console.log(listOfCookies[i]);
+     // console.log(listOfCookies[i]);
      if(listOfCookies[i] == COOKIE_TEXT){
           beenHereBefore = true;
          console.log("setting here to true")

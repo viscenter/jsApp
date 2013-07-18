@@ -1,17 +1,30 @@
 "use strict";
 
-
+        //use the code below for real (furman CITE server)
+	
 	setUpObj_Layers();      //Running the helper function to set up the CITE objects
-	setUpThumbNail();//Same as above for smaller images
+	//setUpThumbNail();//Same as above for smaller images
+	
+	
+	
+	setUpObj_Layers_local(); //This make a fake CITE object that uses local files
+	                         //This is pretty hacky. Now we can use a global object called localCoppCITE
+	
+	
+	                                   //REMOVE the line below to use a real CITE server
+	chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
+	             
+
 	
 	var totalListOfLayers = new Array(); //We only create this once and keep this array till the end
 	                                 //It will hold a max of 5 images for our uses
      
-    var currentListOfLayers = new Array(); //We only create this once and keep this array till the end
+        var currentListOfLayers = new Array(); //We only create this once and keep this array till the end
                                         //This is holds the images that we are currently viewing. 
                                         //It's elements will always be a subset of the totalListOfImages
   
   
+
 
 	var imageSize = 592;//This is bad form
   			     //This value holds the state of the zoom for all images
@@ -29,18 +42,26 @@
     var imageWidth =-1;
     
 
-  	
+  /*
    var layers = {
    "ChadRGB.Chad":0,
    "ChadPOC.Chad-Multispectral1-":1,
  //  "ChadPOC.Chad-Background-":2,
+ 
  //  "ChadPOC.Chad-Latin-":3,
  //  "ChadPOC.Chad-English-":4,
    "ChadPOC.Chad-2003-":3,
    "ChadPOC.Chad-1962-":4,
    "ChadPOC.Chad-1929-":5
    }
-   
+*/
+  var layers={
+	"Chad-Intc-141":0,
+	"Chad-Linf-141":1,
+	"Chad-RGB-141":2,
+	"Chad-Skew-141":3,
+	"Chad-StdDev-141":4
+  }
 
 
 //html was here
@@ -178,6 +199,37 @@ function pan(deltaX,deltaY)
 //This could lead to great load times.
 function getlayers()
 {
+	var i = 0;
+	for( name in layers)
+	{
+		var temp = new Image();
+		chad_cite_Layers.setLayer(name);
+		temp.onload = function() {
+		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src; 
+		                            if(imageHeight === -1)
+		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
+	   								if(imageWidth ===-1)
+		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;
+		}
+		console.log(chad_cite_Layers.fake());
+		temp.src =chad_cite_Layers.fake();
+
+        	temp.setAttribute("number",i.toString())
+		temp.name ="SingleMainImage";
+		//temp.id = layerNames[counter];
+		temp.id = name;
+		temp.style.position = 'absolute';
+		temp.width = "592";
+		temp.height ="789";
+		console.log(temp.src);
+		totalListOfLayers.push(temp);   
+		i = i +1;
+		
+	
+	}
+
+
+/*
 	var counter = 0;
 	while(counter < 5)
 	{
@@ -197,8 +249,10 @@ function getlayers()
 	{
 		var temp = new Image();
 		var hold = i;
-		//chad_cite_Layers.setLayer(layerNames[counter]);
-		chad_cite_Layers.setLayer(name);
+		
+		chad_cite_Layers.setLayer(name); // use the real citeObject to talk to a real cite service
+		
+		
 		temp.onload = function() {
 		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src; 
 		                            if(imageHeight === -1)
@@ -206,7 +260,8 @@ function getlayers()
 	   								if(imageWidth ===-1)
 		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;     
 		                          };
-	    temp.src = chad_cite_Layers.update();
+	    temp.src = chad_cite_Layers.update();  // use the real citeObject to talk to a real cite service
+	    
 	    temp.setAttribute("number",i.toString())
 	    temp.name ="SingleMainImage";
 	    //temp.id = layerNames[counter];
@@ -214,11 +269,13 @@ function getlayers()
 	    temp.style.position = 'absolute';
 	    temp.width = "592";
 	    temp.height ="789";
-	    
+	    console.log(temp.src);
 		totalListOfLayers.push(temp);   
 
 		i = i +1;
 	}
+*/
+
 	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)
 	{
@@ -285,17 +342,17 @@ function updateLayers(layerValue)
 	{
 	    var layerNum = parseInt(layerValue.getAttribute("layerNum"))
 	 	currentListOfLayers.push(totalListOfLayers[layerNum])
-	 	//alert("set to true");
-	 	layerValue.checked = false
-	 	layerValue.setAttribute("checked","false")
-	    var pic = layerValue.children[0]
+	 	console.log("the value == true")
+	 	layerValue.checked = false;
+	 	layerValue.setAttribute("checked","false");
+	    var pic = layerValue.children[0];
 	    pic.className = "selected";
 
 	}
 	else
 	{
-		//alert("set to false");
-		layerValue.setAttribute("checked","true")
+		console.log("the value was set to false");
+		layerValue.setAttribute("checked","true");
 		
     	var pic = layerValue.children[0]
 		pic.className = "unselected"
@@ -304,7 +361,7 @@ function updateLayers(layerValue)
 		var i = 0;
 		while(i < currentListOfLayers.length)
 		{
-			if( layerValue.id == "Check_"+currentListOfLayers[i].id)
+			if( layerValue.id == currentListOfLayers[i].id)
 			{
 				currentListOfLayers[i]= currentListOfLayers[currentListOfLayers.length - 1];
 				currentListOfLayers.pop();		

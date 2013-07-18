@@ -167,6 +167,21 @@ function citeUrn(server,dir, citeNS, workID, collectionID ,defaultImageSize, pag
     return this.pageNumber;
   }
   
+ 
+ 
+ //fake
+ //--------------
+ //fake is a simple hack so the cite object can still be uses on none cite systems.
+ //This function will alow us to test the gui front end while we are unable to contact
+ //The maintainers of the cite system
+ this.fake = fake;
+ function fake()
+ {
+   return this.server+this.dir+this.collectionID + ".jpg";
+ }
+ 
+ 
+ 
   
 
   

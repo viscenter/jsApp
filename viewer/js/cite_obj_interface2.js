@@ -55,6 +55,28 @@ function setUpObj_Layers()
 
 
 
+//setUpObj_layers_local
+//----------------
+//This function creates an "citeUrn" object. This object provides the image for the Main display in the front end
+//Setting up the layers requires us to use the CITE system and not the the CHS systems used above.
+var localCopyCITE;
+function setUpObj_Layers_local()
+{
+  var txt=document.getElementById("buildD");
+  localCopyCITE = new citeUrn("./Image/", //set server
+  "",                               //set dir
+  "",                                             // set CITE namespace
+  "",                                       //set CITE work ID
+  "" ,                                    //set collection ID
+  "",                                             //set default Image size
+   1,                                                 //set start page
+ "updateTargetID",								  //set the update target ID
+   	233 );                                			  //set MaxPage
+}
+
+
+
+
 //getPrev
 //-----------------
 //This function calls the back end object "citeUrn" member function prevPage.
