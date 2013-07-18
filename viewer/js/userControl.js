@@ -10,6 +10,10 @@
 	setUpObj_Layers_local(); //This make a fake CITE object that uses local files
 	                         //This is pretty hacky. Now we can use a global object called localCoppCITE
 	
+	setUpFakeThumb(); //more very hacky code
+	
+	
+	
 	
 	                                   //REMOVE the line below to use a real CITE server
 	chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
@@ -205,7 +209,9 @@ function getlayers()
 		var temp = new Image();
 		chad_cite_Layers.setLayer(name);
 		temp.onload = function() {
-		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src; 
+			                   
+					    fakeThumb.setLayer(this.id);
+					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src; 
 		                            if(imageHeight === -1)
 		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
 	   								if(imageWidth ===-1)

@@ -75,6 +75,20 @@ function setUpObj_Layers_local()
 }
 
 
+var fakeThumb;
+function setUpFakeThumb()
+{
+    fakeThumb = new citeUrn("./smallImage/", //set server
+  "",                               //set dir
+  "",                                             // set CITE namespace
+  "",                                       //set CITE work ID
+  "" ,                                    //set collection ID
+  "",                                             //set default Image size
+   1,                                                 //set start page
+ "updateTargetID",								  //set the update target ID
+   	233 );        
+}
+
 
 
 //getPrev
