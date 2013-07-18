@@ -1,6 +1,22 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html, body, a, abbr, acronym, address, area, b, bdo, big, blockquote, button, caption, cite, code,
+col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img,
+ins, kbd, label, legend, li, map, object, ol, p, param, pre, q, samp, small, span, strong, sub,
+sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
+    padding: 0;
+    /*vertical-align: baseline;*/
+}
+
+body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, a. a:hover {
+  margin: 0;
+  padding: 0;
+}
+
+/*TRANSLATION
+-------------------------------------------------------------------------------------------------*/
 ul#translation {
 	list-style: none;
 	background:url(../assets/translation.jpg) no-repeat 0 0;
@@ -18,14 +34,16 @@ ul#translation  li {
 ul#translation  li a{
 	display: block;
 	height: 100%;
-	text-indent: -9000px;
+	text-decoration:none;
+	/*text-indent:-9999;*/
 }
 
 ul#translation li a:hover {
 	background:url(../assets/translation.jpg) no-repeat 0 0;	
 }
 
-
+/*TRANSLATION LINE 01
+-------------------------------------------------------------------------------------------------*/
 #line_01 {
 	width: 5412px;
 	height: 240px;
@@ -37,6 +55,8 @@ ul#translation li#line_01 a:hover {
 	background-position: 0 -9024px;
 }
 
+/*TRANSLATION LINE 02
+-------------------------------------------------------------------------------------------------*/
 #line_02 {
 	width: 5412px;
 	height: 228px;
@@ -48,6 +68,8 @@ ul#translation li#line_02 a:hover {
 	background-position: 0 -9264px;
 }
 
+/*TRANSLATION LINE 03
+-------------------------------------------------------------------------------------------------*/
 #line_03 {
 	width: 5412px;
 	height: 198px;
@@ -59,6 +81,8 @@ ul#translation li#line_03 a:hover {
 	background-position: 0 -9492px;
 }
 
+/*TRANSLATION LINE 04
+-------------------------------------------------------------------------------------------------*/
 #line_04 {
 	width: 5412px;
 	height: 215px;
@@ -70,6 +94,8 @@ ul#translation li#line_04 a:hover {
 	background-position: 0 -9690px;
 }
 
+/*TRANSLATION LINE 05
+-------------------------------------------------------------------------------------------------*/
 #line_05 {
 	width: 5412px;
 	height: 223px;
@@ -81,6 +107,8 @@ ul#translation li#line_05 a:hover {
 	background-position: 0 -9905px;
 }
 
+/*TRANSLATION LINE 06
+-------------------------------------------------------------------------------------------------*/
 #line_06 {
 	width: 5412px;
 	height: 198px;
@@ -92,6 +120,8 @@ ul#translation li#line_06 a:hover {
 	background-position: 0 -10128px;
 }
 
+/*TRANSLATION LINE 07
+-------------------------------------------------------------------------------------------------*/
 #line_07 {
 	width: 5412px;
 	height: 209px;
@@ -103,6 +133,8 @@ ul#translation li#line_07 a:hover {
 	background-position: 0 -10326px;
 }
 
+/*TRANSLATION LINE 08
+-------------------------------------------------------------------------------------------------*/
 #line_08 {
 	width: 5412px;
 	height: 222px;
@@ -113,6 +145,9 @@ ul#translation li#line_07 a:hover {
 ul#translation li#line_08 a:hover {
 	background-position: 0 -10535px;
 }
+
+/*TRANSLATION LINE 09
+-------------------------------------------------------------------------------------------------*/
 #line_09 {
 	width: 5412px;
 	height: 210px;
@@ -124,6 +159,8 @@ ul#translation li#line_09 a:hover {
 	background-position: 0 -10757px;
 }
 
+/*TRANSLATION LINE 10
+-------------------------------------------------------------------------------------------------*/
 #line_10 {
 	width: 5412px;
 	height: 240px;
@@ -135,6 +172,8 @@ ul#translation li#line_10 a:hover {
 	background-position: 0 -10967px;
 }
 
+/*TRANSLATION LINE 11
+-------------------------------------------------------------------------------------------------*/
 #line_11 {
 	width: 5412px;
 	height: 199px;
@@ -146,6 +185,8 @@ ul#translation li#line_11 a:hover {
 	background-position: 0 -11207px;
 }
 
+/*TRANSLATION LINE 12
+-------------------------------------------------------------------------------------------------*/
 #line_12 {
 	width: 5412px;
 	height: 215px;
@@ -157,6 +198,8 @@ ul#translation li#line_12 a:hover {
 	background-position: 0 -11406px;
 }
 
+/*TRANSLATION LINE 13
+-------------------------------------------------------------------------------------------------*/
 #line_13 {
 	width: 5412px;
 	height: 217px;
@@ -168,6 +211,8 @@ ul#translation li#line_13 a:hover {
 	background-position: 0 -11621px;
 }
 
+/*TRANSLATION LINE 14
+-------------------------------------------------------------------------------------------------*/
 #line_14 {
 	width: 5412px;
 	height: 209px;
@@ -179,6 +224,8 @@ ul#translation li#line_14 a:hover {
 	background-position: 0 -11838px;
 }
 
+/*TRANSLATION LINE 15
+-------------------------------------------------------------------------------------------------*/
 #line_15 {
 	width: 5412px;
 	height: 229px;
@@ -190,6 +237,8 @@ ul#translation li#line_15 a:hover {
 	background-position: 0 -12047px;
 }
 
+/*TRANSLATION LINE 16
+-------------------------------------------------------------------------------------------------*/
 #line_16 {
 	width: 5412px;
 	height: 240px;
@@ -199,4 +248,24 @@ ul#translation li#line_15 a:hover {
 
 ul#translation li#line_16 a:hover {
 	background-position: 0 -12276px;
+}
+
+/*MISC
+-------------------------------------------------------------------------------------------------*/
+ul#translation li a span {
+	display: none;
+}
+
+ul#translation li a:hover span {
+	display: block;
+	padding:10px;
+	width:200px;
+	background:#900;
+	position:relative;
+	top:50%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	opacity:.75;
+	filter:alpha(opacity=75);
+	color:#FFF;
 }
