@@ -59,7 +59,7 @@ for(i in listOfCookies)
 {
      // console.log(listOfCookies[i]);
      if(listOfCookies[i] == COOKIE_TEXT){
-          beenHereBefore = true;
+         // beenHereBefore = true;
          console.log("setting here to true")
      }
 }
@@ -69,14 +69,15 @@ for(i in listOfCookies)
 console.log(beenHereBefore);
 if(beenHereBefore === false)
 {
-    $( "#thumbs_CONTAINER" ).tooltip();
+     $("#collaps_CONTAINTER").attr("title","testTEXT")
+    $( "#collapse_CONTAINER" ).tooltip();
     
-      $("#thumbs_CONTAINER").mouseenter();
+      $("#collapse_CONTAINER").mouseenter();
       window.setTimeout(removeTip, 10000);
       
 
      document.cookie = COOKIE_TEXT;
 }
 function removeTip(){
-     $("#thumbs_CONTAINER").tooltip('disable');
+     $("#collapse_CONTAINER").tooltip('disable');
 }
