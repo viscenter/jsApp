@@ -67,6 +67,7 @@ for(i in listOfCookies)
 //The following code places a tooltip on the screen,
 //Then after serveral seconds removes it
 console.log(beenHereBefore);
+/*
 if(beenHereBefore === false)
 {
      $("#collaps_CONTAINTER").attr("title","testTEXT")
@@ -81,3 +82,8 @@ if(beenHereBefore === false)
 function removeTip(){
      $("#collapse_CONTAINER").tooltip('disable');
 }
+*/
+
+  $(document).ready(function () {
+	$( "#dialog" ).dialog({ autoOpen: true });
+  });
