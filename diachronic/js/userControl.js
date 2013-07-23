@@ -463,11 +463,11 @@ function upDateThumb()
        displayLayers();
     }
     var listOfDest=[];
-    listOfDest[0]="The high-resolution composite of images taken in 2010 at the Lichfield Cathedral. This page contains Matthew 17:22-Matthew 18:3"
-    listOfDest[1]="The composite of images taken in different light spectrums that have been processed by performing mathematical equations to the individual pixels to render a new image. This page contains Matthew 17:22-Matthew 18:3.    "  ; 
-    listOfDest[2] ="The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3."; 
-    listOfDest[3]="The set of images taken of the Chad Gospels in 1962. This page contains Matthew 17:22-Matthew 18:3.  "; 
-    listOfDest[4] ="The set of images taken of the Chad Gospels in 1929. This page contains Matthew 17:22-Matthew 18:3.";
+    listOfDest[0]="The 2010 high-resolution imaging of the Chad Gospels by the Vis Center at Lichfield Cathedral."
+    listOfDest[1]="TThe 2003 imaging of the Chad Gospels."  ; 
+    listOfDest[2] ="The 1962 imaging of the Chad Gospels."; 
+    listOfDest[3]="The 1929 imaging of the Chad Gospels."; 
+    listOfDest[4] ="The 1912 imaging of the Chad Gospels.";
     //listOfDest[5] ="n/a";  
     //listOfDest[6]="n/a";
     //listOfDest[7]="n/a";
