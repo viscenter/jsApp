@@ -87,3 +87,14 @@ function removeTip(){
   $(document).ready(function () {
 	$( "#dialog" ).dialog({ autoOpen: true });
   });
+  
+  
+  
+  
+$( "#helpButton" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+});
+  
+  
+  
+  
