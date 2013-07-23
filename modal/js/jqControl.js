@@ -89,9 +89,13 @@ function removeTip(){
   });
   
   
-  
-  
-$( "#helpButton" ).click(function() {
+  $("#top_LEFT").click(function(){
+       console.log("in back");   
+       history.back();
+
+  })
+    
+$("#helpButton" ).click(function() {
      console.log("cliked");
   $( "#dialog" ).dialog( "open" );
 });
