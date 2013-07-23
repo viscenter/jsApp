@@ -75,12 +75,12 @@ body {
 /*TOP LEFT
 -----------------------------------------------------------*/
 #top_LEFT{
-	width:250px;
+	width:100px;
 	height:50px;
 	float:left;
 }
 
-#top_LEFT p{
+/*#top_LEFT p{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
 	color:#333;
@@ -101,12 +101,26 @@ body {
 	color:#333;
 	padding:15px 0px 0px 0px;
 	text-decoration:underline;
+}*/
+
+#top_LEFT p a.BACK-btn{
+	display:block;
+	width:100px;
+	height:50px;
+	background-image:url(../assets/layout/back_sprite.png);
+	background-position:top;
+	text-indent:-9999px;
+	background-repeat:no-repeat;
+}
+
+#top_LEFT p a.BACK-btn:hover{
+	background-position:bottom;
 }
 
 /*TOP CENTER
 -----------------------------------------------------------*/
 #top_CENTER{
-	width:500px;
+	width:800px;
 	height:50px;
 	float:left;
 }
@@ -130,12 +144,12 @@ body {
 /*TOP RIGHT
 -----------------------------------------------------------*/
 #top_RIGHT{
-	width:250px;
+	width:100px;
 	height:50px;
 	float:left;
 }
 
-#top_RIGHT p{
+/*#top_RIGHT p{
 	font-family:Arial, Helvetica, sans-serif;
 	text-align:right;
 	font-size:16px;
@@ -157,6 +171,20 @@ body {
 	color:#333;
 	padding:15px 0px 0px 0px;
 	text-decoration:underline;
+}*/
+
+#top_RIGHT p a.HELP-btn{
+	display:block;
+	width:100px;
+	height:50px;
+	background-image:url(../assets/layout/help_sprite.png);
+	background-position:top;
+	text-indent:-9999px;
+	margin:0px auto;
+}
+
+#top_RIGHT p a.HELP-btn:hover{
+	background-position:bottom;
 }
 
 /*THUMBS

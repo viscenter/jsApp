@@ -9,6 +9,7 @@
       href="http://infoforest.vis.uky.edu/InfoForest/jsApp/viewer/favicon.png" />
 
 <link href="css/styles_100.css" rel="stylesheet" type="text/css" />
+<link href="css/tool_tip.css" rel="stylesheet" type="text/css" />
 
 <style>
 
@@ -33,10 +34,10 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
 
 
-<div id="dialog" title="Instructions ">This is the Folio viewer</div>
+<div id="dialog" title="Instructions ">Click and drag or use the arrow keys to navigate around the page. Use the scroll wheel or the +/- buttons to zoom in and out.</div>
 
 
 </head>
@@ -52,9 +53,13 @@
                 
                 <div id="top_CONTAINER">
                 	<div id="top">
-                    <div id="top_LEFT"></div>
+                    	<div id="top_LEFT">
+                    	<p><a href="BACK" class="BACK-btn" title="Back" alt="Back">Back</a></p>
+                    	</div>
                     	<div id="top_CENTER"><p>Diachronic Viewer</p></div>
-                    	<div id="top_RIGHT"></div>
+                    	<div id="top_RIGHT">
+                        <p><a href="HELP" class="HELP-btn" title="Help" alt="Help">Help</a></p>
+                        </div>
                     </div>
                 </div>
                 
@@ -100,7 +105,7 @@
         </div>
 		</a>
 		
-              <div id="collapse_CONTAINER" title="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat">
+              <div id="collapse_CONTAINER">
               <div id="collapse">
                <p><a href="#" class="collapse-btn">Press it</a></p>
                </div>
@@ -108,8 +113,8 @@
             
             <div id="zoom">
             <div id="zoom_in"><img id="zoomInImg" src="assets/layout/zoom_in.png" alt="Zoom In" title="Zoom In" width="28" height="28" class="zoom" onclick ="bigger()" onmouseover="document.getElementById('zoomInImg').style.opacity='.5'" onmouseout="document.getElementById('zoomInImg').style.opacity='1'" /></div>
-                    	<div id="zoom_out"><img id="zoomOutImg" src="assets/layout/zoom_out.png" alt="Zoom Out" title="Zoom Out" width="28" height="28" class="zoom" onclick ="smaller()" onmouseover="document.getElementById('zoomOutImg').style.opacity='.5'" onmouseout="document.getElementById('zoomOutImg').style.opacity='1'"/></div>
-                     </div>
+            <div id="zoom_out"><img id="zoomOutImg" src="assets/layout/zoom_out.png" alt="Zoom Out" title="Zoom Out" width="28" height="28" class="zoom" onclick ="smaller()" onmouseover="document.getElementById('zoomOutImg').style.opacity='.5'" onmouseout="document.getElementById('zoomOutImg').style.opacity='1'"/></div>
+            </div>
                 
             </div>
                
