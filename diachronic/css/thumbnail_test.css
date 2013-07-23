@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body, a, abbr, acronym, address, area, b, bdo, big, blockquote, button, caption, cite, code,
+col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img,
+ins, kbd, label, legend, li, map, object, ol, p, param, pre, q, samp, small, span, strong, sub,
+sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
+    padding: 0;
+    /*vertical-align: baseline;*/
+}
+
+body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  /*overflow-y: scroll;*/
+}
+
+body {
+  height: 100%;
+  background-color:#000;
+  /*background: #fff;
+  color: #444;
+  line-height: 1.4;*/
+}
+
+#thumb_WRAPPER{
+	width:100%;
+	height:150px;
+	background-color:#900;
+}
+
+#thumb_CONTAINER{
+	width:1000px;
+	height:150px;
+	margin:0px auto;
+	background-color:#999;
+	text-align:center;
+}
+
+#thumbs{
+	min-width:125px;
+	max-width:1000px;
+	display:inline-block;
+	height:150px;
+	background-color:#0F6;
+	margin:0px auto;
+	overflow:auto;
+}
+.unselected{
+	display:block;
+	margin:25px auto;
+	/*opacity:0.4;*/
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	border:#999 solid 2px;
+	background-color:#FFF;
+}
+
+.selected {
+	display:block;
+	margin:15px auto;
+	border:#FFF solid 5px;
+	background-color:#FFF;
+}
+
+.centerwrapper{
+	margin:auto;
+	width:625;
+}
+
+.thumb{
+	float:left;
+	width:125px;
+	height:150px;
+	/*background-image:url(../assets/layout/thumb_BG.png);
+	background-repeat:no-repeat;*/
+	margin:0px auto;
+}
+
