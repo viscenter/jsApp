@@ -59,23 +59,34 @@
    "ChadPOC.Chad-1929-":5
    }
 */
+
+
+
+//  var layers={
+//	"2010":0,
+//	"2003":1,
+//	"1962":2,
+//	"1929":3,
+//	"1912":4
+  //}
+
   var layers={
-	"2010":0,
-	"2003":1,
-	"1962":2,
-	"1929":3,
-	"1912":4
-  }
-
-
-/*  var layers={
 	"1912":0,
 	"1929":1,
 	"1962":2,
 	"2003":3,
 	"2010":4
-  }
-*/
+}
+var layerNames  =new Array();
+layerNames[0]= "2010";
+layerNames[1]= "2003";
+layerNames[2]= "1962";
+layerNames[3]= "1929";
+layerNames[4]= "1912";
+
+
+
+
 //html was here
 //////////////////////////////////////////////////////////////////////////////
 
@@ -215,12 +226,15 @@ function getlayers()
 	for( name in layers)
 	{
 		var temp = new Image();
-		chad_cite_Layers.setLayer(name);
+		//chad_cite_Layers.setLayer(name);
+		//chad_cite_layers.setLayer(layerNames[i]);
+		chad_cite_Layers.setLayer(layerNames[i]);
 		temp.onload = function() {
 			                   
 					    fakeThumb.setLayer(this.id);
-					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
-		                            if(imageHeight === -1)
+					    //document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
+		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
+					    if(imageHeight === -1)
 		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
 	   				    if(imageWidth ===-1)
 		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;
@@ -232,7 +246,7 @@ function getlayers()
         	temp.setAttribute("number",i.toString())
 		temp.name ="SingleMainImage";
 		//temp.id = layerNames[counter];
-		temp.id = name;
+		temp.id = layerNames[i];
 		temp.style.position = 'absolute';
 		temp.width = "592";
 		temp.height ="789";
