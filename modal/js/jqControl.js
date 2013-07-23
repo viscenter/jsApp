@@ -90,7 +90,12 @@ function removeTip(){
   
   
   $("#top_LEFT").click(function(){
+  
+  $("#top_LEFT").click(function(){
        console.log("in back");   
+       history.back();
+
+  })
        history.back();
 
   })

@@ -87,3 +87,11 @@ function removeTip(){
   $(document).ready(function () {
 	$( "#dialog" ).dialog({ autoOpen: true });
   });
+  
+    
+  $("#top_LEFT").click(function(){
+       console.log("in back");   
+       history.back();
+
+  })
+  
