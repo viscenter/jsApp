@@ -90,18 +90,11 @@ function removeTip(){
   
   
   $("#top_LEFT").click(function(){
-  
-  $("#top_LEFT").click(function(){
-       console.log("in back");   
        history.back();
-
-  })
-       history.back();
-
   })
     
 $("#helpButton" ).click(function() {
-     console.log("cliked");
+  //   console.log("cliked");
   $( "#dialog" ).dialog( "open" );
 });
   
