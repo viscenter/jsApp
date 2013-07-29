@@ -19,7 +19,7 @@ body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fields
 -------------------------------------------------------------------------------------------------*/
 ul#translation {
 	list-style: none;
-	background:url(../assets/translation.jpg) no-repeat 0 0;
+	background:url(../../assets/translations/translation.jpg) no-repeat 0 0;
 	position: relative;
 	width: 5412px;
 	height: 14432px;	
@@ -39,7 +39,14 @@ ul#translation  li a{
 }
 
 ul#translation li a:hover {
-	background:url(../assets/translation.jpg) no-repeat 0 0;	
+	background:url(../../assets/translations/translation.jpg) no-repeat 0 0;	
+}
+
+/*TOP
+-------------------------------------------------------------------------------------------------*/
+#top{
+	height:1804px;
+	width:5412px;
 }
 
 /*TRANSLATION LINE 01
@@ -252,20 +259,29 @@ ul#translation li#line_16 a:hover {
 
 /*MISC
 -------------------------------------------------------------------------------------------------*/
+#bottom{
+	height:1919px;
+	width:5412px;
+}
+
+/*MISC
+-------------------------------------------------------------------------------------------------*/
 ul#translation li a span {
 	display: none;
 }
 
 ul#translation li a:hover span {
 	display: block;
-	padding:10px;
+	margin:0px 0px 0px 500px;
+	padding:50px;
 	width:200px;
-	background:#900;
+	background:#333;
 	position:relative;
-	top:50%;
-	font-family:Arial, Helvetica, sans-serif;
+	top:25%;
+	font-family:Arial, Helvetica, sans-serif; 
 	font-size:14px;
-	opacity:.75;
+	opacity:.85;
 	filter:alpha(opacity=75);
 	color:#FFF;
+	border:solid #FFF 1px;
 }

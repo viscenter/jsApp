@@ -396,6 +396,23 @@ img.collapse{
 	background-color:;
 }
 
+/*COPYRIGHT
+-------------------------------------------------------------------------------------------------*/
+.copyright{
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;
+	text-align:right;
+}
+
+.copyright a{
+	color:#fff;
+	text-align:right;
+}
+
 /*iFRAME
 -------------------------------------------------------------------------------------------------*/
 #myFrame{
