@@ -101,6 +101,5 @@ function removeTip(){
 
 
   $("#helpButton" ).click(function() {
-     console.log("cliked");
   $( "#dialog" ).dialog( "open" );
 });
