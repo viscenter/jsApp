@@ -397,7 +397,7 @@ function whenFrameLoads()
 	var fWidth  = document.getElementById("myFrame").offsetWidth/2;
 
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageSize/2;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =300; //Size of the header bar above the image
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =50; //Size of the header bar above the image
 	
         clearText();
 
