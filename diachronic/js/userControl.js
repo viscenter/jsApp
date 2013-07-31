@@ -248,8 +248,8 @@ function getlayers()
 		//temp.id = layerNames[counter];
 		temp.id = layerNames[i];
 		temp.style.position = 'absolute';
-		temp.width = 592 * 1.5;
-		temp.height =789 * 1.5;
+		temp.width = 592 ;
+		temp.height =789 ;
 		console.log(temp.src);
 		totalListOfLayers.push(temp);   
 		i = i +1;
@@ -418,7 +418,7 @@ function whenFrameLoads()
 
 	var fWidth  = document.getElementById("myFrame").offsetWidth/2;
 
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageSize/2;
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left =fWidth - imageWidth/2;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top =300; //Size of the header bar above the image
 	
         clearText();
