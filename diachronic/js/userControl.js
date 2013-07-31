@@ -248,8 +248,8 @@ function getlayers()
 		//temp.id = layerNames[counter];
 		temp.id = layerNames[i];
 		temp.style.position = 'absolute';
-		temp.width = "592";
-		temp.height ="789";
+		temp.width = 592 * 1.5;
+		temp.height =789 * 1.5;
 		console.log(temp.src);
 		totalListOfLayers.push(temp);   
 		i = i +1;
