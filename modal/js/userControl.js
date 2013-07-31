@@ -30,7 +30,7 @@
   
 
 
-	var imageSize = 592;//This is bad form
+	var imageSize = 888;//This is bad form
   			     //This value holds the state of the zoom for all images
   	
   	
@@ -213,9 +213,9 @@ function getlayers()
 					    fakeThumb.setLayer(this.id);
 					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
 		                            if(imageHeight === -1)
-		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
+		   									imageHeight = parseInt(totalListOfLayers[this.getAttribute("number")].height,0)*1.5;
 	   				    if(imageWidth ===-1)
-		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;
+		  								  imageWidth = parseInt(totalListOfLayers[this.getAttribute("number")].width,0)* 1.5;
 										 
 		}
 		console.log(chad_cite_Layers.fake());
