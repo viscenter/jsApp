@@ -30,7 +30,7 @@
   
 
 
-	var imageSize = 700;//This is bad form
+	var imageSize = 1200;//This is bad form
   			     //This value holds the state of the zoom for all images
   	
   	
