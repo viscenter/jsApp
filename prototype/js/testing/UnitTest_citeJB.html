@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+<script type="text/javascript" language="Javascript" SRC="../citeJB.js"></script>
+<script type="text/javascript" language="Javascript" SRC="../citeJB.js"></script>
+</head>
+
+<body>
+
+
+<table id ="mytable" border="1">
+<tr>
+	<td><input type="button" onclick="build()" value="build citeJB object" />   </td>
+	<td><div id="buildD"></div></td>
+</tr>
+<tr>
+	<td><input type="button" onclick="url()" value="Get a url from the object" /></td>
+	<td> <div id="urlD"></div></td>
+
+</tr>
+<tr>
+	<td><input type="button" onclick="next()" value="get the next url" /></td>
+	<td> <div id="nextD"></div></td>
+
+</tr>
+<tr>
+	<td><input type="button" onclick="prev()" value="get the prev url" /></td>
+	<td> <div id="prevD"></div></td>
+
+</tr>
+<tr>
+	<td><input type="button" onclick="gotoPage()" value="go to page" /><input type="text" id="PageForm" value=""  > </td>
+	<td> </td>
+
+</tr>
+
+</table>
+
+<img id="disp">
+<h3>The page number is <div id="num"></h3>
+<script>
+"use strick";
+var testObject;
+var x = document.getElementById("mytable").getElementsByTagName("td");
+
+//Test object constructor
+//------------------------
+//The object should be created. If there is an issue with the 
+//object the object will return  return undefined when "isCreated" is called
+function build()
+{ 
+  var txt=document.getElementById("buildD");
+  testObject = new citeUrn("/amphoreus.hpcc.uh.edu", //set server
+  "/tomcat/chsimg/Img?&amp;",                               //set dir
+  "cite",                                             // set CITE namespace
+  "fufolioimg",                                       //set CITE work ID
+  "ChadRGB.Chad" ,                                    //set collection ID
+  "100",                                             //set default Image size
+   1,                                                 //set start page
+   "updateTargetID",								  //set the update target ID
+   	233 );                                			  //set MaxPage
+   
+   
+  if(testObject.isCreated) {
+  	x[1].style.backgroundColor = "green";
+  	txt.innerHTML = "pass";
+  }
+  else {
+    x[1].style.backgroundColor = "red";
+    txt.innerHTML = "Fail";
+  }
+}
+
+function url()
+{
+  document.getElementById("urlD").innerHTML = testObject.url;
+  document.getElementById("disp").onload = function(){x[3].style.backgroundColor = "green";}
+  document.getElementById("disp").src = testObject.url;
+  document.getElementById("urlD").innerHTML = testObject.url;
+  document.getElementById("num").innerHTML = testObject.getPageNumber();
+  
+    x[3].style.backgroundColor = "yellow";
+}
+  
+  
+
+function next()
+{
+  document.getElementById("nextD").innerHTML = testObject.nextPage();
+  document.getElementById("disp").onload = function(){x[5].style.backgroundColor = "green";}
+  document.getElementById("disp").src = testObject.url;
+  document.getElementById("num").innerHTML = testObject.getPageNumber()
+
+  
+  x[5].style.backgroundColor = "yellow";
+
+
+}
+
+function prev()
+{
+   document.getElementById("prevD").innerHTML = testObject.prevPage();
+   document.getElementById("disp").onload = function(){x[7].style.backgroundColor = "green";}
+   document.getElementById("disp").src = testObject.url;
+   document.getElementById("num").innerHTML = testObject.getPageNumber()
+
+   
+ x[7].style.backgroundColor = "yellow";
+   
+}
+
+
+function gotoPage()
+{
+	x[9].innerHTML = testObject.setPage(parseInt(document.getElementById("PageForm").value));
+	document.getElementById("disp").onload = function(){x[9].style.backgroundColor = "green";}
+	document.getElementById("num").innerHTML = testObject.getPageNumber()
+	document.getElementById("disp").src = testObject.url;
+
+	x[9].style.backgroundColor = "yellow"
+
+}
+
+
+</script>
+
+</body>
+</html>
