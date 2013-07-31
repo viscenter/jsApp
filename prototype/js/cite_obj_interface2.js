@@ -63,7 +63,7 @@ var localCopyCITE;
 function setUpObj_Layers_local()
 {
   var txt=document.getElementById("buildD");
-  localCopyCITE = new citeUrn("./bigImage/", //set server
+  localCopyCITE = new citeUrn("./images/bigImage/", //set server
   "",                               //set dir
   "",                                             // set CITE namespace
   "",                                       //set CITE work ID
@@ -78,7 +78,7 @@ function setUpObj_Layers_local()
 var fakeThumb;
 function setUpFakeThumb()
 {
-    fakeThumb = new citeUrn("./smallImage/", //set server
+    fakeThumb = new citeUrn("./images/smallImage/", //set server
   "",                               //set dir
   "",                                             // set CITE namespace
   "",                                       //set CITE work ID
