@@ -86,6 +86,7 @@ function loadImageInThumb()
 //---------
 //Bigger is called when the button with the "+" is clicked.
 //Bigger sets the "imageSize" then has the images redrawn
+/*
 function bigger()
 {
 
@@ -107,12 +108,13 @@ function bigger()
 	   displayLayers();
 	}
 }
-
+*/
 
 //smaller()
 //---------
 //Smaller is called when the button with the "-" is clicked.
 //smaller sets the "imageSize" then has the images redrawn
+/*
 function smaller()
 {
 
@@ -134,7 +136,7 @@ function smaller()
 	   displayLayers();
 	}
 }
-
+*/
 
 
 function panUp()
