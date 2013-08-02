@@ -19,7 +19,7 @@ body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fields
 -------------------------------------------------------------------------------------------------*/
 ul#translation {
 	list-style: none;
-	background:url(../../assets/translations/translation.jpg) no-repeat 0 0;
+	background:url(../assets/translations/translation.jpg) no-repeat 0 0;
 	position: relative;
 	width: 5412px;
 	height: 14432px;	
@@ -39,7 +39,7 @@ ul#translation  li a{
 }
 
 ul#translation li a:hover {
-	background:url(../../assets/translations/translation.jpg) no-repeat 0 0;	
+	background:url(../assets/translations/translation.jpg) no-repeat 0 0;	
 }
 
 /*TOP
