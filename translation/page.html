@@ -41,4 +41,39 @@
   </ul>
 <div>
 </body>
+
+
+<script>
+  x =0
+  y = 0
+//I am opening a second script tag to keep space between the jqury and the javascript
+//This space is for the jqury
+  $("#draggable").draggable({ });
+  $('buttons').css('z-index', '1000');
+
+     
+$('body').mouseout(function(){
+    //console.log("Here");
+ //   alert("Hail Mary");
+    var e = jQuery.Event( "mouseup" );
+    jQuery( "body" ).trigger( e );
+    });
+    
+
+//If the mouse moves out of the div this fucntion will be called
+function drop()
+{
+   var e = jQuery.Event( "mouseup" );
+    jQuery( "body" ).trigger( e );
+}
+
+
+
+//This make the curser change into a hand when over the iamge.
+$('#buttonsAndImageDiv').css('cursor', 'move'); 
+
+
+</script>
+
+
 </html>
