@@ -211,17 +211,17 @@ function getlayers()
 		temp.onload = function() {
 			                   
 					    fakeThumb.setLayer(this.id);
-					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
+					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = chad_cite_Layers.update();// fakeThumb.fake() //= this.src;
 		                            if(imageHeight === -1)
 		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
 	   				    if(imageWidth ===-1)
 		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;
 										 
 		}
-		console.log(chad_cite_Layers.fake());
-		temp.src =chad_cite_Layers.fake();
-
-        	temp.setAttribute("number",i.toString())
+		console.log(chad_cite_Layers.update());  //.fake());
+		temp.src =chad_cite_Layers.update());  //.fake();
+        
+        temp.setAttribute("number",i.toString())
 		temp.name ="SingleMainImage";
 		//temp.id = layerNames[counter];
 		temp.id = name;
