@@ -16,7 +16,7 @@
 	
 	
 	                                   //REMOVE the line below to use a real CITE server
-	chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
+	//chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
 	             
 
 	
