@@ -219,7 +219,7 @@ function getlayers()
 										 
 		}
 		console.log(chad_cite_Layers.update());  //.fake());
-		temp.src =chad_cite_Layers.update());  //.fake();
+		temp.src =chad_cite_Layers.update();  //.fake();
         
         temp.setAttribute("number",i.toString())
 		temp.name ="SingleMainImage";
