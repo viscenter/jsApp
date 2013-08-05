@@ -7,10 +7,10 @@
 	
 	
 	
-	setUpObj_Layers_local(); //This make a fake CITE object that uses local files
+	//setUpObj_Layers_local(); //This make a fake CITE object that uses local files
 	                         //This is pretty hacky. Now we can use a global object called localCoppCITE
 	
-	setUpFakeThumb(); //more very hacky code
+	//setUpFakeThumb(); //more very hacky code
 	
 	
 	
@@ -203,40 +203,8 @@ function pan(deltaX,deltaY)
 //This could lead to great load times.
 function getlayers()
 {
-	var i = 0;
-	for( name in layers)
-	{
-		var temp = new Image();
-		chad_cite_Layers.setLayer(name);
-		temp.onload = function() {
-			                   
-					    fakeThumb.setLayer(this.id);
-					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = chad_cite_Layers.update();// fakeThumb.fake() //= this.src;
-		                            if(imageHeight === -1)
-		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
-	   				    if(imageWidth ===-1)
-		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;
-										 
-		}
-		console.log(chad_cite_Layers.update());  //.fake());
-		temp.src =chad_cite_Layers.update();  //.fake();
-        
-        temp.setAttribute("number",i.toString())
-		temp.name ="SingleMainImage";
-		//temp.id = layerNames[counter];
-		temp.id = name;
-		temp.style.position = 'absolute';
-		temp.width = "592";
-		temp.height ="789";
-		console.log(temp.src);
-		totalListOfLayers.push(temp);   
-		i = i +1;
-		
-	
-	}
 
 
-/*
 	var counter = 0;
 	while(counter < 5)
 	{
@@ -281,7 +249,7 @@ function getlayers()
 
 		i = i +1;
 	}
-*/
+
 
 	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)
