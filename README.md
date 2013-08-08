@@ -50,8 +50,8 @@ The folder tree will look like the tree below
 	 ├── prototype     (prototype viewer specific)
 	 │   ├── css       
 	 │   └── js        
-	 ├── translation   (translation viewer specific) 
-	 │   ├── assets
-	 │   ├── css
-	 │   └── js
-	 └── viewer
+	 └── translation   (translation viewer specific) 
+	     ├── assets
+	     ├── css
+	     └── js
+	
