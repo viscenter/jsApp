@@ -25,3 +25,33 @@ Downloading/Hosting
 If you would like to host a copy of this viewer your self you can download the files from this repository.
 If you do this the, the images will have to be unzipped and placed in the corrected directories for the local cite work.
 
+
+
+Folder Description
+------------------
+There are currently 4 viewers to analyze images.
+*    Diachronic      Compare images taken over a period of years
+*    Modal           Compare Images taken with at differing spectra of light
+*    Translation     Compare the English Translation of the pages
+*    Prototype       Uses the CITE server to compare spectral images
+
+
+The folder tree will look like the tree below
+    
+     $ tree -d -L 2
+
+	 ├── css           (main CSS folder)
+	 ├── data          (main Data folder)
+	 ├── diachronic    (diachronic viewer specific)
+	 │   └── js        
+	 ├── js            (main JavaScript)
+	 ├── modal         (modal viewer specific)
+	 │   └── js        
+	 ├── prototype     (prototype viewer specific)
+	 │   ├── css       
+	 │   └── js        
+	 ├── translation   (translation viewer specific) 
+	 │   ├── assets
+	 │   ├── css
+	 │   └── js
+	 └── viewer
