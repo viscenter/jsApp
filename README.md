@@ -41,7 +41,6 @@ The folder tree will look like the tree below
      $ tree -d -L 2
 
 	 ├── css           (main CSS folder)
-	 ├── data          (main Data folder)
 	 ├── diachronic    (diachronic viewer specific)
 	 │   └── js        
 	 ├── js            (main JavaScript)
@@ -51,7 +50,6 @@ The folder tree will look like the tree below
 	 │   ├── css       
 	 │   └── js        
 	 └── translation   (translation viewer specific) 
-	     ├── assets
 	     ├── css
 	     └── js
 	
