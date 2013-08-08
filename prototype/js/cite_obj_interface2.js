@@ -74,7 +74,7 @@ function setUpObj_Layers_local()
    	233 );                                			  //set MaxPage
 }
 
-/*
+
 var fakeThumb;
 function setUpFakeThumb()
 {
@@ -88,7 +88,7 @@ function setUpFakeThumb()
  "updateTargetID",								  //set the update target ID
    	233 );        
 }
-*/
+
 
 
 //getPrev

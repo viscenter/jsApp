@@ -827,7 +827,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid #000;
-	background: #000 urlurl(../../assets/layout/exit_btn.png) 50% 50% no-repeat;
+	background: #000 url(../assets/layout/exit_btn.png) 50% 50% no-repeat;
 	font-weight: normal;
 	color: #555555;
 }
@@ -836,6 +836,7 @@ body .ui-tooltip {
 .ui-state-default a:visited {
 	color: #555555;
 	text-decoration: none;
+	background: #000 url(../assets/layout/exit_btn.png) 50% 50% no-repeat;
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
@@ -854,12 +855,14 @@ body .ui-tooltip {
 .ui-state-hover a:visited {
 	color: #212121;
 	text-decoration: none;
+	background: #000 url(../assets/layout/exit_btn_hover.png) 50% 50% no-repeat;
 }
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	border: 1px solid #000;
-	background: #000 urlurl(../../assets/layout/exit_btn.png) 50% 50% no-repeat;
+	background-color:#000;
+	background: #000 url(../assets/layout/exit_btn.png) 50% 50% no-repeat;
 	font-weight: normal;
 	color: #212121;
 }
@@ -868,6 +871,7 @@ body .ui-tooltip {
 .ui-state-active a:visited {
 	color: #212121;
 	text-decoration: none;
+	background: #000 url(../assets/layout/exit_btn.png) 50% 50% no-repeat;
 }
 
 /* Interaction Cues
@@ -934,27 +938,27 @@ body .ui-tooltip {
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_222222_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_222222_256x240.png);*/
 }
 .ui-widget-header .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_222222_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_222222_256x240.png);*/
 }
 .ui-state-default .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_888888_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_888888_256x240.png);*/
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_454545_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_454545_256x240.png);*/
 }
 .ui-state-active .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_454545_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_454545_256x240.png);*/
 }
 .ui-state-highlight .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_2e83ff_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_2e83ff_256x240.png);*/
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url(../diachronic/css/images/ui-icons_cd0a0a_256x240.png);
+	/*background-image: url(../diachronic/css/images/ui-icons_cd0a0a_256x240.png);*/
 }
 
 /* positioning */

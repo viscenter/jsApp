@@ -7,16 +7,16 @@
 	
 	
 	
-	//setUpObj_Layers_local(); //This make a fake CITE object that uses local files
+	setUpObj_Layers_local(); //This make a fake CITE object that uses local files
 	                         //This is pretty hacky. Now we can use a global object called localCoppCITE
 	
-	//setUpFakeThumb(); //more very hacky code
+	setUpFakeThumb(); //more very hacky code
 	
 	
 	
 	
 	                                   //REMOVE the line below to use a real CITE server
-	//chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
+	chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
 	             
 
 	
@@ -46,7 +46,7 @@
     var imageWidth =-1;
     
 
-  
+  /*
    var layers = {
    "ChadRGB.Chad":0,
    "ChadPOC.Chad-Multispectral1-":1,
@@ -58,8 +58,7 @@
    "ChadPOC.Chad-1962-":4,
    "ChadPOC.Chad-1929-":5
    }
-
-/*
+*/
   var layers={
 	"Chad-RGB-141":0,
 	"Chad-Intc-141":1,
@@ -67,7 +66,7 @@
 	"Chad-Skew-141":3,
 	"Chad-StdDev-141":4
   }
-*/
+
 
 //html was here
 //////////////////////////////////////////////////////////////////////////////
@@ -204,8 +203,40 @@ function pan(deltaX,deltaY)
 //This could lead to great load times.
 function getlayers()
 {
+	var i = 0;
+	for( name in layers)
+	{
+		var temp = new Image();
+		chad_cite_Layers.setLayer(name);
+		temp.onload = function() {
+			                   
+					    fakeThumb.setLayer(this.id);
+					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
+		                            if(imageHeight === -1)
+		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
+	   				    if(imageWidth ===-1)
+		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;
+										 
+		}
+		console.log(chad_cite_Layers.fake());
+		temp.src =chad_cite_Layers.fake();
+
+        	temp.setAttribute("number",i.toString())
+		temp.name ="SingleMainImage";
+		//temp.id = layerNames[counter];
+		temp.id = name;
+		temp.style.position = 'absolute';
+		temp.width = "592";
+		temp.height ="789";
+		console.log(temp.src);
+		totalListOfLayers.push(temp);   
+		i = i +1;
+		
+	
+	}
 
 
+/*
 	var counter = 0;
 	while(counter < 5)
 	{
@@ -250,7 +281,7 @@ function getlayers()
 
 		i = i +1;
 	}
-
+*/
 
 	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)

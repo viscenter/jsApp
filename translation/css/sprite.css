@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#back_img {
+	width:5412px;
+	height:7216px;
+	background: url(../assets/LatinMock.jpg);
+}
+
+.overlay {
+	width:5412px;
+	height:auto;
+}
+
+#region1 {
+	height:25.013%;
+}
+
+#region1:hover {
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px 0px;
+	background-size: 100%;
+	}
+
+#region2 {
+	height:3.325%;
+}
+	
+#region2:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -1805px;
+	background-size: 100%;
+	}
+	
+#region3 {
+	height:3.159%;
+}
+	
+#region3:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -2045px;
+	background-size: 100%;
+	}
+	
+#region4 {
+	height:2.743%;
+}	
+
+#region4:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -2273px;
+	background-size: 100%;
+	}
+
+#region5 {
+	height:2.979%;
+}
+	
+#region5:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -2471px;
+	background-size: 100%;
+	}
+
+#region6 {
+	height:3.090%;
+}
+	
+#region6:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -2686px;
+	background-size: 100%;
+	}
+
+#region7 {
+	height:2.743%;
+}
+	
+#region7:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -2909px;
+	background-size: 100%;
+	}
+
+#region8 {
+	height:2.896%;
+}
+	
+#region8:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -3107px;
+	background-size: 100%;
+	}
+
+#region9 {
+	height:3.076%;
+}
+	
+#region9:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -3316px;
+	background-size: 100%;
+	}
+
+#region10 {
+	height:2.910%;
+}
+	
+#region10:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -3538px;
+	background-size: 100%;
+	}
+
+#region11 {
+	height:3.325%;
+}
+	
+#region11:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -3748px;
+	background-size: 100%;
+	}
+
+#region12 {
+	height:2.757%;
+}
+	
+#region12:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -3988px;
+	background-size: 100%;
+	}
+
+#region13 {
+	height:2.979%;
+}
+	
+#region13:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -4187px;
+	background-size: 100%;
+	}
+
+#region14 {
+	height:3.007%;
+}
+	
+#region14:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -4402px;
+	background-size: 100%;
+	}
+
+#region15 {
+	height:2.896%;
+}
+	
+#region15:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -4619px;
+	background-size: 100%;
+	}
+
+#region16 {
+	height:3.173%;
+}
+	
+#region16:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -4828px;
+	background-size: 100%;
+	}
+
+#region17 {
+	height:3.325%;
+}
+	
+#region17:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -5057px;
+	background-size: 100%;
+	}
+
+#region18 {
+	height:26.593%;
+}
+	
+#region18:hover {	
+	background: url(../assets/TranslationMock_aligned_English.jpg) 0px -5297px;
+	background-size: 100%;
+	}
+														
+	
+	
+	

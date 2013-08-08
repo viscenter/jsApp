@@ -1,0 +1,88 @@
+
+<html>
+<head>
+
+  <!-- 
+  Including jquery libraries. Later in this page jquery in used
+  NOTE, before we distribute this we should have locale copies for both jquery files
+  -->
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/sprites.css" />
+
+   <style type="text/css">
+    	html, body {
+    		height: 100%;
+    		margin: 0;
+    	}
+
+    	#wrapper {
+    		min-height: 100%; 
+    	}
+    </style>
+
+
+
+</head>
+
+<!--
+The Style tag below allows us to set things to the style called draggable.
+Later we will give very special abilities to the draggable style  
+-->
+<style>
+	#draggable 
+	{
+    	position:absolute;
+    	z-Index:1;
+    	align:center;
+	}
+</style>
+<body>
+<div id="buttonsAndImageDiv">
+	<div id="draggable">
+		<div id="back_img">
+		<div id="front_img">
+			<div class="overlay" id="region1"></div>
+			<div class="overlay" id="region2"></div>
+			<div class="overlay" id="region3"></div>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+
+<script>
+  x =0
+  y = 0
+//I am opening a second script tag to keep space between the jqury and the javascript
+//This space is for the jqury
+	$("#draggable").draggable({	});
+	$('buttons').css('z-index', '1000');
+
+     
+$('body').mouseout(function(){
+    //console.log("Here");
+ //   alert("Hail Mary");
+    var e = jQuery.Event( "mouseup" );
+    jQuery( "body" ).trigger( e );
+    });
+    
+
+//If the mouse moves out of the div this fucntion will be called
+function drop()
+{
+   var e = jQuery.Event( "mouseup" );
+    jQuery( "body" ).trigger( e );
+}
+
+
+
+//This make the curser change into a hand when over the iamge.
+$('#buttonsAndImageDiv').css('cursor', 'move'); 
+
+
+</script>
+
+
+</html>
+

@@ -1,0 +1,40 @@
+#back_img {
+	width:1600px;
+	height:1200px;
+	background: url('../assets/img_background.jpg');
+	background-size: 100%;
+}
+
+.overlay {
+	width:100%;
+	height:auto;
+}
+
+#region1 {
+	height:33.33%;
+}
+
+#region1:hover {
+	background: url('../assets/img_overlays.jpg') 0px 0px;
+	background-size: 100%;
+	}
+	
+#region2 {
+	height:33.33%;
+}
+	
+#region2:hover {	
+	background: url('../assets/img_overlays.jpg') 0px -200px;
+	background-size: 100%;
+	}
+	
+#region3 {
+	height:33.33%;
+}
+
+#region3:hover {	
+	background: url('../assets/img_overlays.jpg') 0px -400px;
+	background-size: 100%;
+	}
+	
+	
