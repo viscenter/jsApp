@@ -22,12 +22,16 @@ The easiest way to view the demonstration is to navigate to the University Of Ke
 ##Downloading/Hosting##
 
 If you would like to host a copy of this viewer your self you can download the files from this repository.
-If you do this the, the images will have to be unzipped and placed in the corrected directories for the local cite work.
+If you do this the, the images will have to be unzipped and placed in the corrected directories for the local cite work. 
+The HTML files that are view images are called
+
+*    jsApp/diachronic/diachronic.html 
+*    jsApp/modal/modal.html
+*    jsApp/prototype/viewer.html
 
 
 
 ##Folder Description##
-
 There are currently 4 viewers to analyze images.
 *    Diachronic      Compare images taken over a period of years
 *    Modal           Compare Images taken with at differing spectra of light
@@ -52,3 +56,10 @@ The folder tree will look like the tree below
 	     ├── css
 	     └── js
 	
+
+##Referances##
+*     [http://vis.uky.edu/blog/2013/06/28/paris/](University of Kentucky Folio link CHANGE THIS TO MINI SITE)
+*     [http://folio.furman.edu/](University Of Furman)
+*     [http://www.cs.uky.edu/](University Of Kentucky Department Computer Science)
+
+
