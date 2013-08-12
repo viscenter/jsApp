@@ -10,7 +10,6 @@
      {
           $("#thumbs_CONTAINER").slideUp(1);
          showState =false;
-       //   $("#thumbs_CONTAINER").css({"z-index":1});
           $("#thumbs_CONTAINER").css({"height":"0"});
           $("#header_MAIN").css({"height":"50"});
           $("#collapse").children().children().removeClass('collapse-btn').addClass('expand-btn');   
@@ -21,8 +20,7 @@
      {
       
         $("#thumbs_CONTAINER").slideDown(1);
-         showState = true;
-       //  $("#thumbs_CONTAINER").css({"z-index":-1});
+        showState = true;
 
         $("#thumbs_CONTAINER").css({"height":"210px"});
         $("#header_MAIN").css({"height":"260px"}); 
@@ -53,53 +51,19 @@ $("#wrapper_MAIN").mouseout(function(){
 });
 
 
-var i,listOfCookies=document.cookie.split(";");
-var beenHereBefore = false;
-for(i in listOfCookies)
-{
-     // console.log(listOfCookies[i]);
-     if(listOfCookies[i] == COOKIE_TEXT){
-         // beenHereBefore = true;
-         console.log("setting here to true")
-     }
-}
-
-//The following code places a tooltip on the screen,
-//Then after serveral seconds removes it
-console.log(beenHereBefore);
-/*
-if(beenHereBefore === false)
-{
-     $("#collaps_CONTAINTER").attr("title","testTEXT")
-    $( "#collapse_CONTAINER" ).tooltip();
-    
-      $("#collapse_CONTAINER").mouseenter();
-      window.setTimeout(removeTip, 10000);
-      
-
-     document.cookie = COOKIE_TEXT;
-}
-function removeTip(){
-     $("#collapse_CONTAINER").tooltip('disable');
-}
-*/
-
+  //open the dialog box whenn the page loads
   $(document).ready(function () {
-	$( "#dialog" ).dialog({ autoOpen: true });
+	   $( "#dialog" ).dialog({ autoOpen: true });
   });
   
     
-//  $("#top_LEFT").click(function(){
-//       console.log("in back");   
-//       history.back();
 
-//  })
-  
+  //back button functionality
   $("#top_LEFT").click(function(){
        history.back();
   })
 
-
+   //help button functinality
   $("#helpButton" ).click(function() {
-  $( "#dialog" ).dialog( "open" );
-});
+      $( "#dialog" ).dialog( "open" ); 
+  });
