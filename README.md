@@ -64,9 +64,9 @@ The folder tree will look like the tree below
 	
 
 ###References###
-*     [http://vis.uky.edu/blog/2013/06/28/paris/](University of Kentucky Folio link CHANGE THIS TO MINI SITE)
-*     [http://folio.furman.edu/](University Of Furman)
-*     [http://www.cs.uky.edu/](University Of Kentucky Department Computer Science)
+*     [University of Kentucky Folio](http://vis.uky.edu/blog/2013/06/28/paris/)
+*     [University Of Furman](http://folio.furman.edu/)
+*     [University Of Kentucky Department Computer Science](http://www.cs.uky.edu/)
 
 
 
