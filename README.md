@@ -1,37 +1,43 @@
-jsApp
+jsApp  
 -----
 
 
-##Introduction##
+###Introduction###
   
-The University Of Kentucky has developed several JavaScript demonstration applications. 
-These applications show our ability to register different images that contain the same subjects.
+The University Of Kentucky has developed several JavaScript  applications for displaying registered images. 
+These demonstration applications represent work done under the FoLIO project. The viewers in this repository highlight registration along multiple axes: time, wavelength of light, and semantic content. 
 
+###Demonstration###
 
-##Viewing##
-
-Currently (2013) The University of Kentucky is hosting these files on the main computer science server. 
-The easiest way to view the demonstration is to navigate to the University Of Kentucky site, by flowing the link below.
-
+Live versions of these viewers are currently availible via the links below.  
 
 [Modal Viewer](http://www.vis.uky.edu/static/folio/modal/modal.html)  
 [Diachronic Viewer](http://www.vis.uky.edu/static/folio/diachronic/diachronic.html)
 
 
 
-##Downloading/Hosting##
+###Installation###
 
-If you would like to host a copy of this viewer your self you can download the files from this repository.
-If you do this the, the images will have to be unzipped and placed in the corrected directories for the local cite work. 
-The HTML files that are view images are called
+These viewers are designed to run out of the box, by simply opening their HTML files. 
+Due to size constraints we have zipped the assets and image folders. They must be unzipped before the images will be displayed.
+    
+    git clone https://github.com/viscenter/jsApp.git
+    cd jsApp
+    unzip assets.zip
+    unzip diachronic/images.zip
+    unzip modal/images.zip
+ 
+The HTML files for the viewers are located in the sub folders:  
+*	jsApp/diachronic/diachronic.html  
+*	jsApp/modal/modal.html  
+*	jsApp/prototype/viewer.html  
+*	jsApp/translation/translation.html  
 
-*    jsApp/diachronic/diachronic.html 
-*    jsApp/modal/modal.html
-*    jsApp/prototype/viewer.html
+_NOTE: Due to browser security policies, viewers may not work correctly when locally viewed. 
+This is due to cross domain scripting security policies. Hosting the viewers on a web server will fix this issue._
 
 
-
-##Folder Description##
+###Folder Description###
 There are currently 4 viewers to analyze images.
 *    Diachronic      Compare images taken over a period of years
 *    Modal           Compare Images taken with at differing spectra of light
@@ -57,9 +63,11 @@ The folder tree will look like the tree below
 	     └── js
 	
 
-##Referances##
+###References###
 *     [http://vis.uky.edu/blog/2013/06/28/paris/](University of Kentucky Folio link CHANGE THIS TO MINI SITE)
 *     [http://folio.furman.edu/](University Of Furman)
 *     [http://www.cs.uky.edu/](University Of Kentucky Department Computer Science)
+
+
 
 
