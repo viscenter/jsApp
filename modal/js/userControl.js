@@ -236,52 +236,7 @@ function getlayers()
 	}
 
 
-/*
-	var counter = 0;
-	while(counter < 5)
-	{
-		if(totalListOfLayers[counter] != undefined)
-		{
-			delete totalListOfLayers[counter];
-			//alert("delete"); //works now
-		}
-		counter = counter + 1;
-	}
-	
-	
-	totalListOfLayers = [];
-	var i = 0;
 
-	for (name in layers)
-	{
-		var temp = new Image();
-		var hold = i;
-		
-		chad_cite_Layers.setLayer(name); // use the real citeObject to talk to a real cite service
-		
-		
-		temp.onload = function() {
-		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src; 
-		                            if(imageHeight === -1)
-		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
-	   								if(imageWidth ===-1)
-		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;     
-		                          };
-	    temp.src = chad_cite_Layers.update();  // use the real citeObject to talk to a real cite service
-	    
-	    temp.setAttribute("number",i.toString())
-	    temp.name ="SingleMainImage";
-	    //temp.id = layerNames[counter];
-	    temp.id = name;
-	    temp.style.position = 'absolute';
-	    temp.width = "592";
-	    temp.height ="789";
-	    console.log(temp.src);
-		totalListOfLayers.push(temp);   
-
-		i = i +1;
-	}
-*/
 
 	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)
@@ -424,9 +379,7 @@ function upDateThumb()
 	var listOfThumb = document.getElementsByClassName("thumb");
 	for(var i = 0; i<listOfThumb.length;i++)
 	{
-		//listOfThumb[i].children[0].src = totalListOfLayers[i].src;
-		//listOfThumb[0][i].style.opacity = .3;
-		//alert("setThumb")
+
 	}
 
      var y = document.getElementsByClassName("thumb");
@@ -456,7 +409,6 @@ function upDateThumb()
 	   y[i].setAttribute("description","<p>" + listOfDest[i]);
     }
     
-   // window.scroll = whenScrolled;
     
 
 }
@@ -469,7 +421,6 @@ function whenScrolled()
 
 function whenMouseWheel(event)
 {
-//alert(event.wheelDeltaY) ;
         if( event.wheelDeltaY > 10){
 			bigger();       
 	     }
@@ -483,8 +434,6 @@ function whenMouseWheel(event)
 
 function whenKeyPressed(data)
 {
- //console.log(data);
- //console.log(data.keyCode);
  if(data.which == 37)      panRight();
  else if(data.which == 38) panDown(); 
  else if(data.which == 39)  panLeft();
