@@ -1,13 +1,19 @@
+//jqControl.js
+//------------
+//Most of the functions were written in pure javascript,
+//But several functions use high level jquery. This is the file where the 
+//jquery is saved. The functions here do a number of different things
 
 
- var COOKIE_TEXT = "infoForest=true"
- var showState = true;
  
 
-
+//This is the code that control the thumbnail bar. 
+//If the element with the id collapse is clicked on, the code below runs.
+//Depending on the showState variable, the thumbnails come down or go up.
     $("#collapse").click(function () {
      if(showState)
      {
+          //the menu is showing, so hide it
           $("#thumbs_CONTAINER").slideUp(1);
          showState =false;
           $("#thumbs_CONTAINER").css({"height":"0"});
@@ -18,7 +24,7 @@
      }
      else
      {
-      
+         //the menu is not showing, so show it
         $("#thumbs_CONTAINER").slideDown(1);
         showState = true;
 
@@ -33,7 +39,7 @@
     
     
 //the function below sets the image to the center of the iframe when the window is resized
-   
+
     var stateWidth = document.getElementById("myFrame").offsetWidth;     
         $(window).resize(function() 
         {    
@@ -42,6 +48,7 @@
           document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = pos - diff;
           stateWidth = document.getElementById("myFrame").offsetWidth;
         });
+
 
 
 //this functioin "drops" the image if the mouse leave the image.

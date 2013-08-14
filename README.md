@@ -5,7 +5,7 @@ jsApp
 ###Introduction###
   
 The University Of Kentucky has developed several JavaScript  applications for displaying registered images. 
-These demonstration applications represent work done under the FoLIO project. The viewers in this repository highlight registration along multiple axes: time, wavelength of light, and semantic content. 
+These demonstration applications represent work done under the FoLIO project. The viewers in this repository highlight registration along multiple axes: time, wavelength of light, and semantic content. This material is based upon work supported by the National Science Foundation under Grant No. 0916421.  Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 ###Demonstration###
 
@@ -24,7 +24,9 @@ Due to size constraints we have zipped the assets and image folders. They must b
     git clone https://github.com/viscenter/jsApp.git
     cd jsApp
     unzip assets.zip
+    cd diachronic
     unzip diachronic/images.zip
+    cd ../modal
     unzip modal/images.zip
  
 The HTML files for the viewers are located in the sub folders:  

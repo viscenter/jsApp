@@ -46,19 +46,6 @@
     var imageWidth =-1;
     
 
-  /*
-   var layers = {
-   "ChadRGB.Chad":0,
-   "ChadPOC.Chad-Multispectral1-":1,
- //  "ChadPOC.Chad-Background-":2,
- 
- //  "ChadPOC.Chad-Latin-":3,
- //  "ChadPOC.Chad-English-":4,
-   "ChadPOC.Chad-2003-":3,
-   "ChadPOC.Chad-1962-":4,
-   "ChadPOC.Chad-1929-":5
-   }
-*/
   var layers={
 	"Chad-RGB-141":0,
 	"Chad-Intc-141":1,
@@ -84,7 +71,6 @@ function prev()
 	loadImageInThumb();
     getlayers();
 
-   // displayLayers();
 }
 
 function next()
@@ -93,19 +79,9 @@ function next()
     loadImageInThumb();
     getlayers();
 
-    //displayLayers()
 }
 
-function loadImageInThumb()
-{
-	var listOfThumb = document.getElementsByClassName("thumb");
-	for(var i = 0; i<listOfThumb.length;i++)
-	{
-		listOfThumb[i].children[0].src =  "./assets/page_thumbs/thumb_loader.gif";
 
-	}
-
-}
 
 //bigger()
 //---------
@@ -162,6 +138,10 @@ function smaller()
 
 
 
+
+//The 4 functions below are pan control functions. They all call the the pan(,) function but with different
+//arguments. These functions are not currently in use. The functions simulate the dragging movments. 
+//They were used when we had buttons to pan, but now. We use drag as a sole means a panning
 function panUp()
 {
      var t = document.getElementById("myFrame").offsetHeight;
@@ -208,8 +188,9 @@ function getlayers()
 	{
 		var temp = new Image();
 		chad_cite_Layers.setLayer(name);
-		temp.onload = function() {
-			                   
+		temp.onload = function() { 
+			             //This is the image lisener, a pretty standard js desgine pattern,
+			             //As soon as the image is loaded the code in the lisener will run.
 					    fakeThumb.setLayer(this.id);
 					    document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
 		                            if(imageHeight === -1)
@@ -218,7 +199,7 @@ function getlayers()
 		  								  imageWidth = parseInt(totalListOfLayers[this.getAttribute("number")].width,0)* 1.5;
 										 
 		}
-		console.log(chad_cite_Layers.fake());
+		//console.log(chad_cite_Layers.fake());
 		temp.src =chad_cite_Layers.fake();
 
         	temp.setAttribute("number",i.toString())
@@ -431,6 +412,14 @@ function whenMouseWheel(event)
 }
 
 
+
+
+//whenKeyPressed(data)
+//--------------------
+//This function alows for the keyboard to control the panning. This function matches up
+//keyboard code the pan directions
+//37 is the keybaord key for right.
+//40 is the keyboard key for up.
 
 function whenKeyPressed(data)
 {
