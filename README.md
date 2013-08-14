@@ -41,10 +41,10 @@ This is due to cross domain scripting security policies. Hosting the viewers on 
 
 ###Folder Description###
 There are currently 4 viewers to analyze images.
-*    Diachronic      Compare images taken over a period of years
-*    Modal           Compare Images taken with at differing spectra of light
-*    Translation     Compare the English Translation of the pages
-*    Prototype       Uses the CITE server to compare spectral images
+*    Diachronic      :Compare images taken over a period of years
+*    Modal           :Compare Images taken with at differing spectra of light
+*    Translation     :Compare the English Translation of the pages
+*    Prototype       :Uses the [CITE server](http://folio.furman.edu/cfc/api?req=GetValidReff&urn=urn:cite:fufolio:msChad) to compare spectral images
 
 
 The folder tree will look like the tree below

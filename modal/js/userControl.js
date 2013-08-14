@@ -224,10 +224,7 @@ function getlayers()
 	{
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").removeChild(getElementById("myFrame").contentDocument.getElementById("imageDiv").childNodes[0]);
 	}
-		//while(window.frames['myFrame'].document.getElementById("imageDiv").hasChildNodes() == true)
-	//{
-	//	window.frames['myFrame'].document.getElementById("imageDiv").removeChild(window.frames['myFrame'].document.getElementById("imageDiv").childNodes[0]);
-	//}
+
 	
 }
 

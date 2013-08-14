@@ -46,29 +46,6 @@
     var imageWidth =-1;
     
 
-  /*
-   var layers = {
-   "ChadRGB.Chad":0,
-   "ChadPOC.Chad-Multispectral1-":1,
- //  "ChadPOC.Chad-Background-":2,
- 
- //  "ChadPOC.Chad-Latin-":3,
- //  "ChadPOC.Chad-English-":4,
-   "ChadPOC.Chad-2003-":3,
-   "ChadPOC.Chad-1962-":4,
-   "ChadPOC.Chad-1929-":5
-   }
-*/
-
-
-
-//  var layers={
-//	"2010":0,
-//	"2003":1,
-//	"1962":2,
-//	"1929":3,
-//	"1912":4
-  //}
 
   var layers={
 	"1912":0,
@@ -103,7 +80,6 @@ function prev()
 	loadImageInThumb();
     getlayers();
 
-   // displayLayers();
 }
 
 function next()
@@ -111,18 +87,6 @@ function next()
 	chad_cite_Layers.nextPage();
     loadImageInThumb();
     getlayers();
-
-    //displayLayers()
-}
-
-function loadImageInThumb()
-{
-	var listOfThumb = document.getElementsByClassName("thumb");
-	for(var i = 0; i<listOfThumb.length;i++)
-	{
-		listOfThumb[i].children[0].src =  "./assets/page_thumbs/thumb_loader.gif";
-
-	}
 
 }
 
@@ -181,6 +145,9 @@ function smaller()
 
 
 
+//The 4 functions below are pan control functions. They all call the the pan(,) function but with different
+//arguments. These functions are not currently in use. The functions simulate the dragging movments. 
+//They were used when we had buttons to pan, but now. We use drag as a sole means a panning
 function panUp()
 {
      var t = document.getElementById("myFrame").offsetHeight;
@@ -230,7 +197,9 @@ function getlayers()
 		//chad_cite_layers.setLayer(layerNames[i]);
 		chad_cite_Layers.setLayer(layerNames[i]);
 		temp.onload = function() {
-			                   
+                                  //This is the image lisener, a pretty standard js desgine pattern,
+                                  //As soon as the image is loaded the code in the lisener will run.
+						                   
 					    fakeThumb.setLayer(this.id);
 					    //document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
 		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = fakeThumb.fake() //= this.src;
@@ -258,62 +227,11 @@ function getlayers()
 	}
 
 
-/*
-	var counter = 0;
-	while(counter < 5)
-	{
-		if(totalListOfLayers[counter] != undefined)
-		{
-			delete totalListOfLayers[counter];
-			//alert("delete"); //works now
-		}
-		counter = counter + 1;
-	}
-	
-	
-	totalListOfLayers = [];
-	var i = 0;
-
-	for (name in layers)
-	{
-		var temp = new Image();
-		var hold = i;
-		
-		chad_cite_Layers.setLayer(name); // use the real citeObject to talk to a real cite service
-		
-		
-		temp.onload = function() {
-		                            document.getElementsByClassName("thumb")[parseInt(this.getAttribute("number"))].children[0].src = this.src; 
-		                            if(imageHeight === -1)
-		   								imageHeight = totalListOfLayers[this.getAttribute("number")].height;
-	   								if(imageWidth ===-1)
-		  								 imageWidth = totalListOfLayers[this.getAttribute("number")].width;     
-		                          };
-	    temp.src = chad_cite_Layers.update();  // use the real citeObject to talk to a real cite service
-	    
-	    temp.setAttribute("number",i.toString())
-	    temp.name ="SingleMainImage";
-	    //temp.id = layerNames[counter];
-	    temp.id = name;
-	    temp.style.position = 'absolute';
-	    temp.width = "592";
-	    temp.height ="789";
-	    console.log(temp.src);
-		totalListOfLayers.push(temp);   
-
-		i = i +1;
-	}
-*/
-
-	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)
 	{
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").removeChild(getElementById("myFrame").contentDocument.getElementById("imageDiv").childNodes[0]);
 	}
-		//while(window.frames['myFrame'].document.getElementById("imageDiv").hasChildNodes() == true)
-	//{
-	//	window.frames['myFrame'].document.getElementById("imageDiv").removeChild(window.frames['myFrame'].document.getElementById("imageDiv").childNodes[0]);
-	//}
+
 	
 }
 
@@ -333,22 +251,17 @@ function displayLayers()
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").removeChild(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").childNodes[0]);
 	}
 	
-	//while(window.frames['myFrame'].document.getElementById("imageDiv").hasChildNodes() == true)
-	//{
-	//	window.frames['myFrame'].document.getElementById("imageDiv").removeChild(window.frames['myFrame'].document.getElementById("imageDiv").childNodes[0]);
-	//}
+
 
 	var counter = 0;
 	while(counter < currentListOfLayers.length)
 	{
 		currentListOfLayers[counter].align="center";
-		// =  currentListOfLayers[counter].width * scale ;//imageSize
-		//= currentListOfLayers[counter].height *scale ;//imageSize; 
+
 		
 		currentListOfLayers[counter].width  =imageWidth;
 		currentListOfLayers[counter].height  = imageHeight;
 		currentListOfLayers[counter].style.opacity = 1.0/(counter+1) ;//currentListOfLayers.length;
-		//(window.frames['myFrame'].document.getElementById("imageDiv")).appendChild(currentListOfLayers[counter]);
 		document.getElementById("myFrame").contentDocument.getElementById("imageDiv").appendChild(currentListOfLayers[counter]);
 		counter = counter + 1;
 	}
@@ -500,6 +413,16 @@ function whenMouseWheel(event)
     	}
     	 
 }
+
+
+
+
+//whenKeyPressed(data)
+//--------------------
+//This function alows for the keyboard to control the panning. This function matches up
+//keyboard code the pan directions
+//37 is the keybaord key for right.
+//40 is the keyboard key for up.
 
 
 
