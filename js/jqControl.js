@@ -10,6 +10,7 @@
 //This is the code that control the thumbnail bar. 
 //If the element with the id collapse is clicked on, the code below runs.
 //Depending on the showState variable, the thumbnails come down or go up.
+var showState = true;
     $("#collapse").click(function () {
      if(showState) //If the banner is showing and the button was clicked slide up
      {
