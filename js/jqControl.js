@@ -11,7 +11,7 @@
 //If the element with the id collapse is clicked on, the code below runs.
 //Depending on the showState variable, the thumbnails come down or go up.
     $("#collapse").click(function () {
-     if(showState)
+     if(showState) //If the banner is showing and the button was clicked slide up
      {
           //the menu is showing, so hide it
           $("#thumbs_CONTAINER").slideUp(1);
@@ -22,11 +22,11 @@
    
 
      }
-     else
+     else  //If the button was clicked and the banner was not showing, show it
      {
          //the menu is not showing, so show it
         $("#thumbs_CONTAINER").slideDown(1);
-        showState = true;
+        showState = true; //Set showState to true, so we don't try to show it twice
 
         $("#thumbs_CONTAINER").css({"height":"210px"});
         $("#header_MAIN").css({"height":"260px"}); 
@@ -53,6 +53,9 @@
 
 //this functioin "drops" the image if the mouse leave the image.
 //It calles a function written the clean.html file
+//This is a work around to a nasy side effect. If you release the mouse while not over the iframe, the iframe will not register the release. 
+//Not registering the release causes the image to "stick" to the mouse. 
+//The code below fixes this issue
 $("#wrapper_MAIN").mouseout(function(){
     $('#myFrame')[0].contentWindow.drop();
 });
@@ -60,17 +63,17 @@ $("#wrapper_MAIN").mouseout(function(){
 
   //open the dialog box whenn the page loads
   $(document).ready(function () {
-	   $( "#dialog" ).dialog({ autoOpen: true });
+	   $( "#dialog" ).dialog({ autoOpen: true });  //When the document (page) is loaded show the help box
   });
   
     
 
   //back button functionality
   $("#top_LEFT").click(function(){
-       history.back();
+       history.back();              //go back when the button is clicked
   })
 
    //help button functinality
   $("#helpButton" ).click(function() {
-      $( "#dialog" ).dialog( "open" ); 
+      $( "#dialog" ).dialog( "open" ); //open the help button when clicked
   });

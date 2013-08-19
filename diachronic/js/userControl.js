@@ -75,11 +75,10 @@ var scrollThresh = 10;
 //These are the discriptions for the thumbnails
 var descr =  new Array();
 descr[0] = "The high-resolution composite of images taken in 2010 at the Lichfield Cathedral. This page contains Matthew 17:22-Matthew 18:3"
-descr[1] = "The composite of images taken in different light spectrums that have been processed by performing mathematical equations to the individual pixels to render a new image. This page contains Matthew 17:22-Matthew 18:3.    "  ; 
-descr[2] = "The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3."; 
-descr[3] = "The set of images taken of the Chad Gospels in 1962. This page contains Matthew 17:22-Matthew 18:3.  "; 
-descr[4] = "The set of images taken of the Chad Gospels in 1929. This page contains Matthew 17:22-Matthew 18:3.";
-
+descr[1] = "The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3.  "
+descr[2] = "The set of images taken of the Chad Gospels in 1962. This page contains Matthew 17:22-Matthew 18:3.  "; 
+descr[3] = "The set of images taken of the Chad Gospels in 1929. This page contains Matthew 17:22-Matthew 18:3.";
+descr[4] = "The set of images taken of the Chad Gospels in 1912. This page contains Matthew 17:22-Matthew 18:3.";
 
 //Request page from CITE server
 //chad_cite_Layers.setPage(79);
