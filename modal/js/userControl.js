@@ -60,7 +60,7 @@
     var descriptionDefaultText = "<p><strong>Description:</strong> Above is the data set of the Chad Gospels that were imaged with permission from the Lichfield Cathedral in England. Select the layers you wish to view—either on its own or in comparison with another—by clicking on the thumbnail.</p></div>";
 
     //These are the discriptions for the thumbnails
-    var descr[];
+    var descr =  new Array();
     descr[0]="The high-resolution composite of images taken in 2010 at the Lichfield Cathedral. This page contains Matthew 17:22-Matthew 18:3"
     descr[1]="The composite of images taken in different light spectrums that have been processed by performing mathematical equations to the individual pixels to render a new image. This page contains Matthew 17:22-Matthew 18:3.    "  ; 
     descr[2] ="The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3."; 
