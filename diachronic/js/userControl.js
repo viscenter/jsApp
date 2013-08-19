@@ -59,6 +59,28 @@ layerNames[2]= "1962";
 layerNames[3]= "1929";
 layerNames[4]= "1912";
 
+
+
+//amount we move when we pan
+var panDistance = 10;
+
+//The height of the upperheader of the webPage
+var headerSize = 50;
+   
+//scroll sensitivity, how long does a user have to scroll before the message is send
+var scrollThresh = 10;
+
+
+
+//These are the discriptions for the thumbnails
+var descr[];
+descr[0] = "The high-resolution composite of images taken in 2010 at the Lichfield Cathedral. This page contains Matthew 17:22-Matthew 18:3"
+descr[1] = "The composite of images taken in different light spectrums that have been processed by performing mathematical equations to the individual pixels to render a new image. This page contains Matthew 17:22-Matthew 18:3.    "  ; 
+descr[2] = "The set of images taken of the Chad Gospels in 2003. This page contains Matthew 17:22-Matthew 18:3."; 
+descr[3] = "The set of images taken of the Chad Gospels in 1962. This page contains Matthew 17:22-Matthew 18:3.  "; 
+descr[4] = "The set of images taken of the Chad Gospels in 1929. This page contains Matthew 17:22-Matthew 18:3.";
+
+
 //Request page from CITE server
 //chad_cite_Layers.setPage(79);
 
@@ -148,23 +170,23 @@ function smaller()
 function panUp()
 {
      var t = document.getElementById("myFrame").offsetHeight;
-     pan(0,-t/10);
+     pan(0,-t/panDistance);
 }
 function panDown()
 {
      var t = document.getElementById("myFrame").offsetHeight;
-     pan(0,t/10);
+     pan(0,t/panDistance);
 }
 function panRight()
 {
      var t = document.getElementById("myFrame").offsetWidth;
-     pan(t/10,0);
+     pan(t/panDistance,0);
 }
 
 function panLeft()
 {
      var t = document.getElementById("myFrame").offsetWidth;
-     pan(-t/10,0);
+     pan(-t/panDistance,0);
 }
 
 function pan(deltaX,deltaY)
@@ -323,7 +345,7 @@ function whenFrameLoads()
 	//Centers the iframe and moves it below the navigation bar
 	var fWidth = document.getElementById("myFrame").offsetWidth/2;
 	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.left = fWidth - imageSize/2;
-	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top = 50; //Size of the navigation bar above the image
+	document.getElementById("myFrame").contentDocument.getElementById("draggable").style.top = headerSize; //Size of the navigation bar above the image
 	
 	//Updates the description element
  	clearText();
@@ -369,14 +391,23 @@ function upDateThumb()
        currentListOfLayers.push(totalListOfLayers[0]);
        displayLayers();
     }
-    
+    var listOfDest=[];
+
     //Links thumbnail to a description of that layer. Used by whenThumbMouseOver()
+    /*
     var listOfDest=[];
     listOfDest[0]="The 2010 high-resolution imaging of the Chad Gospels by the Vis Center at Lichfield Cathedral."
     listOfDest[1]="TThe 2003 imaging of the Chad Gospels."  ; 
     listOfDest[2] ="The 1962 imaging of the Chad Gospels."; 
     listOfDest[3]="The 1929 imaging of the Chad Gospels."; 
     listOfDest[4] ="The 1912 imaging of the Chad Gospels.";
+
+    */
+    listOfDest[0] = descr[0];
+    listOfDest[1] = descr[1];
+    listOfDest[2] = descr[2];
+    listOfDest[3] = descr[3];
+    listOfDest[4] = descr[4];
     //Adding the descriptions to y div
     for(var i = 0; i<y.length;i++)
     {
@@ -389,10 +420,10 @@ function upDateThumb()
 //Changing these values changes how "quickly" one zooms
 function whenMouseWheel(event)
 	{
-			if( event.wheelDeltaY > 10){
+			if( event.wheelDeltaY > scrollThresh){
 				bigger();       
 			 }
-			if(event.wheelDeltaY < -10 ){
+			if(event.wheelDeltaY < -scrollThresh ){
 				 smaller();
 			} 
 	}
