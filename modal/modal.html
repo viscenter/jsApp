@@ -47,6 +47,7 @@
 <body onkeydown="whenKeyPressed(event)" onload="upDateThumb()">
         	<div id="wrapper_MAIN">
 		
+                  <!--the window that the main image is displayed in is the iframe, which is below -->
             	<iframe  frameBorder="0" align="justify" id="myFrame" scrolling="no" src="./clean.html" onload="whenFrameLoads()"  onmousewheel="whenMouseWheel(event)" ></iframe>
 
             </div>
@@ -72,7 +73,7 @@
                 <div id="thumbs_CONTAINER">
                 <div id="thumbs">
                    <div class="centerwrapper">
-			
+			<!-- the HTML below controls the the thumbnails -->
 			
 	    <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Chad-RGB-141"    title="Check_ChadPOC.Chad-English-" onclick="updateLayers(this)"layerNum="0"checked="true"><img src="../assets/layout/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
 	    <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Chad-Intc-141"   title="Check_ChadPOC.Chad-Background-" onclick="updateLayers(this)" layerNum="1"checked="true"><img src="../assets/layout/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
@@ -80,26 +81,7 @@
             <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Chad-Skew-141"   title="Check_ChadPOC.Chad-2003-" onclick="updateLayers(this)" layerNum="3" checked="true" ><img src="../assets/layout/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
             <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Chad-StdDev-141" title="Check_ChadPOC.Chad-1962-" onclick="updateLayers(this)" layerNum="4" checked="true"><img src="../assets/layout/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
 			
-			
-			
-			
-		<!--	
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadRGB.Chad"  onclick="updateLayers(this)"  layerNum="0" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-Multispectral1-"  onclick="updateLayers(this)" layerNum="1" checked="true"> <img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-          -->
-	  <!--
-	    <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-Background-" title="Check_ChadPOC.Chad-Background-" onclick="updateLayers(this)" layerNum="2"checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-Latin-" title="Check_ChadPOC.Chad-Latin-" onclick="updateLayers(this)" layerNum="3"checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-English-" title="Check_ChadPOC.Chad-English-" onclick="updateLayers(this)"layerNum="4"checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-2003-" title="Check_ChadPOC.Chad-2003-" onclick="updateLayers(this)" layerNum="5" checked="true" ><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-1962-" title="Check_ChadPOC.Chad-1962-" onclick="updateLayers(this)" layerNum="6" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-1929-" title="Check_ChadPOC.Chad-1929-" onclick="updateLayers(this)" layerNum="7" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-        -->
-         <!--
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-2003-"  onclick="updateLayers(this)" layerNum="2" checked="true" ><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-1962-"  onclick="updateLayers(this)" layerNum="3" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-            <div class="thumb" onmouseover="whenThumbMouseOver(this)" onmouseout="clearText()" id="Check_ChadPOC.Chad-1929-" onclick="updateLayers(this)" layerNum="4" checked="true"><img src="assets/page_thumbs/thumb_loader.gif" width="75" height="100" class="unselected" /> </div>
-        -->
+
 	            </div>
                 </div>
                 
