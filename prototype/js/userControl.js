@@ -46,7 +46,7 @@
     var imageWidth =-1;
     
 
-  /*
+
    var layers = {
    "ChadRGB.Chad":0,
    "ChadPOC.Chad-Multispectral1-":1,
@@ -58,7 +58,7 @@
    "ChadPOC.Chad-1962-":4,
    "ChadPOC.Chad-1929-":5
    }
-*/
+/*
   var layers={
 	"Chad-RGB-141":0,
 	"Chad-Intc-141":1,
@@ -66,7 +66,7 @@
 	"Chad-Skew-141":3,
 	"Chad-StdDev-141":4
   }
-
+*/
 
 //html was here
 //////////////////////////////////////////////////////////////////////////////
