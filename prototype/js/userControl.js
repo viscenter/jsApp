@@ -201,9 +201,10 @@ function pan(deltaX,deltaY)
 //GetLayers uses the cite object called chad_cite_Layers, to 
 //generate a an array of all the layers called totalListOfLayers.
 //This could lead to great load times.
-/*
+
 function getlayers()
 {
+	/*
 	var i = 0;
 	for( name in layers)
 	{
