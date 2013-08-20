@@ -54,9 +54,9 @@
  
  //  "ChadPOC.Chad-Latin-":3,
  //  "ChadPOC.Chad-English-":4,
-   "ChadPOC.Chad-2003-":3,
-   "ChadPOC.Chad-1962-":4,
-   "ChadPOC.Chad-1929-":5
+   "ChadPOC.Chad-2003-":2,
+   "ChadPOC.Chad-1962-":3,
+   "ChadPOC.Chad-1929-":4
    }
 /*
   var layers={
