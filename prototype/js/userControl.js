@@ -16,7 +16,7 @@
 	
 	
 	                                   //REMOVE the line below to use a real CITE server
-	chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
+	//chad_cite_Layers =   localCopyCITE;//This line over writes the cite object with the local fake cite objct
 	             
 
 	
@@ -201,6 +201,7 @@ function pan(deltaX,deltaY)
 //GetLayers uses the cite object called chad_cite_Layers, to 
 //generate a an array of all the layers called totalListOfLayers.
 //This could lead to great load times.
+/*
 function getlayers()
 {
 	var i = 0;
@@ -235,8 +236,8 @@ function getlayers()
 	
 	}
 
+*/
 
-/*
 	var counter = 0;
 	while(counter < 5)
 	{
@@ -281,7 +282,6 @@ function getlayers()
 
 		i = i +1;
 	}
-*/
 
 	
 	while(document.getElementById("myFrame").contentDocument.getElementById("imageDiv").hasChildNodes() == true)
